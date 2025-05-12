@@ -1,19 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "AppFoundry API and database",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "ts-node -r tsconfig-paths/register src/server.ts",
     "start": "ts-node -r tsconfig-paths/register src/server.ts",
-    "seed": "ts-node -r tsconfig-paths/register src/scripts/importNotes.ts",
-    "build": "tsc",
+    "dev": "ts-node -r tsconfig-paths/register src/server.ts",
     "start:watch": "nodemon --exec ts-node -r tsconfig-paths/register src/server.ts",
-    "start:dev": "npm run start:watch"
+    "seed": "ts-node -r tsconfig-paths/register src/scripts/importNotes.ts",
+    "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Justin Hebenstreit",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",

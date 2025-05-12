@@ -7,7 +7,7 @@ const Home = () => {
 
         <>
 
-            <Header text="Code Quest" />
+            <Header text="AppFoundry" />
 
             <div className='siteInfo'>
 

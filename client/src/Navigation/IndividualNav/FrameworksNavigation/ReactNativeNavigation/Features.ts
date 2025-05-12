@@ -1,6 +1,6 @@
 import { Subpage } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-const RNNativeFeaturesNavigation: Subpage = {
+const RNFeaturesNavigation: Subpage = {
   name: "Native Features",
   subpages: [
     {
@@ -21,4 +21,4 @@ const RNNativeFeaturesNavigation: Subpage = {
   ]
 };
 
-export default RNNativeFeaturesNavigation;
+export default RNFeaturesNavigation;
