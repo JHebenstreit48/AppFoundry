@@ -6,12 +6,11 @@ import { HashLink } from "react-router-hash-link";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkGfm from "remark-gfm";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-
-import cleanMaterialTheme from "@/Utils/cleanMaterialTheme";
+import materialLight from "react-syntax-highlighter/dist/esm/styles/prism/material-light";
 import BackToTop from "@/Components/PageComponents/Notes/BackToTopButton";
 import "@/SCSS/PageStyles/Notes.scss";
 
-// Load PrismJS languages
+// PrismJS language imports (only what you use)
 import "react-syntax-highlighter/dist/esm/languages/prism/javascript";
 import "react-syntax-highlighter/dist/esm/languages/prism/typescript";
 import "react-syntax-highlighter/dist/esm/languages/prism/markup";
@@ -32,6 +31,7 @@ interface NotesProps {
   markdownContent?: string;
 }
 
+// Fetch Markdown from API
 const loadMarkdown = async (filePath: string): Promise<string> => {
   const encodedPath = encodeURIComponent(filePath);
   const response = await fetch(`/api/notes/${encodedPath}`);
@@ -39,6 +39,23 @@ const loadMarkdown = async (filePath: string): Promise<string> => {
     throw new Error(`Failed to fetch Markdown content: ${filePath}`);
   }
   return response.text();
+};
+
+// Custom dark theme override
+const darkGrayTheme = {
+  ...materialLight,
+  'pre[class*="language-"]': {
+    ...materialLight['pre[class*="language-"]'],
+    background: 'rgb(29, 31, 33)',
+    boxShadow: 'none',
+    padding: '1rem',
+  },
+  'code[class*="language-"]': {
+    ...materialLight['code[class*="language-"]'],
+    background: 'rgb(29, 31, 33)',
+    color: '#fff',
+    padding: '1rem',
+  },
 };
 
 const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
@@ -67,9 +84,7 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
           remarkPlugins={[remarkGfm]}
           components={{
             code({ className, children, ...props }) {
-              const language = className
-                ? className.replace("language-", "")
-                : "";
+              const language = className?.replace("language-", "") || "";
               const codeString = String(children).trim();
 
               return (
@@ -86,19 +101,19 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
                     </button>
                   </div>
                   <SyntaxHighlighter
-  style={cleanMaterialTheme}
-  language={language}
-  PreTag="div"
-  {...props}
->
-  {codeString}
-</SyntaxHighlighter>
+                    // @ts-expect-error Theme typing is incorrect
+                    style={darkGrayTheme}
+                    language={language}
+                    PreTag="div"
+                    {...props}
+                  >
+                    {codeString}
+                  </SyntaxHighlighter>
                 </div>
               );
             },
-
             a({ href, children, ...props }) {
-              if (href && href.startsWith("/")) {
+              if (href?.startsWith("/")) {
                 return (
                   <HashLink to={href} {...props}>
                     {children}
@@ -111,7 +126,6 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
                 </a>
               );
             },
-
             table({ children, ...props }) {
               return (
                 <div className="tableWrapper">

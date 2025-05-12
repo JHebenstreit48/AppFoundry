@@ -19,7 +19,7 @@ $table-header-bg: #333;
 $table-cell-bg: #444;
 $dropdown-hover: rgb(60, 60, 60); // ✅ Added missing variable
 
-$font-main: 'Arial', sans-serif;
+$font-main: "Arial", sans-serif;
 $font-monospace: monospace;
 
 /* =============================
@@ -277,13 +277,14 @@ $small-laptop-min: 1024px;
 
       pre,
       code {
+        background: none !important; // ✅ Let the SyntaxHighlighter override take effect
         line-height: 1.7 !important;
-        white-space: pre-wrap !important; // ✅ Wrap long lines
-        word-break: break-word !important; // ✅ Wrap long tokens
-        text-indent: 0 !important; // ✅ Remove first-line indent
-        margin: 0 !important; // ✅ Normalize spacing
-        padding: 0 !important; // ✅ Remove any leftover space
-        overflow-x: hidden !important; // ✅ Disable horizontal scroll
+        white-space: pre-wrap !important;
+        word-break: break-word !important;
+        text-indent: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important;
       }
     }
 
