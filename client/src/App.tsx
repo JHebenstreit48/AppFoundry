@@ -1,35 +1,73 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Outlet } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+// ==========================
+//     Component Imports
+// ==========================
+
+import Footer from '@/Components/PageComponents/Footer';
+import EntryScreen from "@/Pages/ErrorHomeSplash/EntryScreen";
+import SplashScreen from '@/Pages/ErrorHomeSplash/SplashScreen';
+
+// ==========================
+//        SCSS Imports
+// ==========================
+
+// ----- Page Styles Start -----
+import '@/SCSS/PageStyles/Page.scss';
+import '@/SCSS/PageStyles/Header.scss';
+import '@/SCSS/PageStyles/Footer.scss';
+// ----- Page Styles End -----
+
+// ----- Navigation Styles Start -----
+import '@/SCSS/NavigationStyles/Navigation.scss';
+import '@/SCSS/NavigationStyles/SearchModal.scss';
+// ----- Navigation Styles End -----
+
+// ----- Special Page Styles Start -----
+import '@/SCSS/PageStyles/Error.scss';
+import '@/SCSS/PageStyles/EntryScreen.scss';
+import '@/SCSS/PageStyles/SplashScreen.scss';
+// ----- Special Page Styles End -----
+
+// ==========================
+//         App Logic
+// ==========================
+
+export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasEntered, setHasEntered] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Simulated load
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const entered = sessionStorage.getItem("hasEntered");
+    if (entered === "true") setHasEntered(true);
+  }, []);
+
+  const handleEnter = () => {
+    sessionStorage.setItem("hasEntered", "true");
+    setHasEntered(true);
+  };
+
+  // ==========================
+  //      Conditional Renders
+  // ==========================
+
+  if (isLoading) return <SplashScreen />;
+  if (!hasEntered) return <EntryScreen onEnter={handleEnter} />;
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="appContainer">
+      <div className="contentWrapper">
+        <Outlet />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <Footer />
+    </div>
+  );
 }
-
-export default App
