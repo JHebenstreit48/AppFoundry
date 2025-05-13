@@ -6,6 +6,7 @@ export interface INote extends Document {
   title: string;
   category?: string;
   content: string;
+  path: string; // ✅ NEW: logical path used in routing
 }
 
 // Define the schema
@@ -14,8 +15,10 @@ const noteSchema: Schema = new Schema({
   title: { type: String, required: true },
   category: { type: String, required: false },
   content: { type: String, required: true },
+  path: { type: String, required: true, unique: true } // ✅ NEW: required and unique
 });
 
 // Export model
 const NoteModel = mongoose.model<INote>("Note", noteSchema);
+
 export default NoteModel;

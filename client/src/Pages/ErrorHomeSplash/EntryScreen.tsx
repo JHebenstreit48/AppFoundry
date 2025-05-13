@@ -17,9 +17,9 @@ const EntryScreen: React.FC<IntroSplashScreenProps> = ({ onEnter }) => {
 
   return (
     <div className={`SplashScreen ${isFading ? "fade-out" : ""}`}>
-      <img src="/Favicon/CodeQuest.webp" alt="CodeQuest Logo" className="logo" />
-      <h1 className="splash-title">Welcome to CodeQuest</h1>
-      <p className="splash-desc">Your journey into coding mastery begins here.</p>
+      <img src="/Favicon/AppFoundry.webp" alt="AppFoundry Logo" className="logo" />
+      <h1 className="splash-title">Welcome to AppFoundry</h1>
+      <p className="splash-desc">Your journey into app development mastery begins here.</p>
       <button className="splash-button" onClick={handleClick}>
         Enter
       </button>
