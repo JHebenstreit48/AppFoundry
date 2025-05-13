@@ -12,7 +12,7 @@ const Home = () => {
             <div className='siteInfo'>
 
                 <p className='siteInfoContent'>
-                    CodeQuest is a personal reference site for full stack web development. It began as a React.js version of a vanilla HTML project from a web development bootcamp and has since grown into a structured space for long-term learning.
+                    AppFoundry is a personal reference site for mobile app and game development. It serves as a collection of notes and resources that I have found useful in my journey as a developer. The site is designed to be a quick reference for myself and others who are interested in learning more about mobile app and game development.
                 </p>
 
                 <p className='siteInfoContent'>
