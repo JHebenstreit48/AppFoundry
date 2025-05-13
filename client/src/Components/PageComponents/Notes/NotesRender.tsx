@@ -1,72 +1,77 @@
-import { useEffect, useState } from "react";
-import ReactMarkdown from "react-markdown";
-import rehypeRaw from "rehype-raw";
-import rehypeSlug from "rehype-slug";
-import { HashLink } from "react-router-hash-link";
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import remarkGfm from "remark-gfm";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import materialLight from "react-syntax-highlighter/dist/esm/styles/prism/material-light";
-import BackToTop from "@/Components/PageComponents/Notes/BackToTopButton";
-import "@/SCSS/PageStyles/Notes.scss";
+import { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import rehypeSlug from 'rehype-slug';
+import { HashLink } from 'react-router-hash-link';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import remarkGfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import materialLight from 'react-syntax-highlighter/dist/esm/styles/prism/material-light';
+import BackToTop from '@/Components/PageComponents/Notes/BackToTopButton';
+import '@/SCSS/PageStyles/Notes.scss';
 
 // PrismJS language imports (only what you use)
-import "react-syntax-highlighter/dist/esm/languages/prism/javascript";
-import "react-syntax-highlighter/dist/esm/languages/prism/typescript";
-import "react-syntax-highlighter/dist/esm/languages/prism/markup";
-import "react-syntax-highlighter/dist/esm/languages/prism/css";
-import "react-syntax-highlighter/dist/esm/languages/prism/scss";
-import "react-syntax-highlighter/dist/esm/languages/prism/tsx";
-import "react-syntax-highlighter/dist/esm/languages/prism/json";
-import "react-syntax-highlighter/dist/esm/languages/prism/sql";
-import "react-syntax-highlighter/dist/esm/languages/prism/graphql";
-import "react-syntax-highlighter/dist/esm/languages/prism/bash";
-import "react-syntax-highlighter/dist/esm/languages/prism/docker";
-import "react-syntax-highlighter/dist/esm/languages/prism/nginx";
-import "react-syntax-highlighter/dist/esm/languages/prism/mongodb";
-import "react-syntax-highlighter/dist/esm/languages/prism/python";
+import 'react-syntax-highlighter/dist/esm/languages/prism/javascript';
+import 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
+import 'react-syntax-highlighter/dist/esm/languages/prism/markup';
+import 'react-syntax-highlighter/dist/esm/languages/prism/css';
+import 'react-syntax-highlighter/dist/esm/languages/prism/scss';
+import 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
+import 'react-syntax-highlighter/dist/esm/languages/prism/json';
+import 'react-syntax-highlighter/dist/esm/languages/prism/sql';
+import 'react-syntax-highlighter/dist/esm/languages/prism/graphql';
+import 'react-syntax-highlighter/dist/esm/languages/prism/bash';
+import 'react-syntax-highlighter/dist/esm/languages/prism/docker';
+import 'react-syntax-highlighter/dist/esm/languages/prism/nginx';
+import 'react-syntax-highlighter/dist/esm/languages/prism/mongodb';
+import 'react-syntax-highlighter/dist/esm/languages/prism/python';
 
 interface NotesProps {
   filePath: string;
   markdownContent?: string;
 }
 
-// Fetch Markdown from API
+// ✅ Use .env-configured API base URL
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
+
+// ✅ Load Markdown content from the backend
 const loadMarkdown = async (filePath: string): Promise<string> => {
-  const encodedPath = encodeURIComponent(filePath);
-  const response = await fetch(`/api/notes/${encodedPath}`);
+  const fullUrl = `${API_BASE_URL}/notes/${filePath}`;
+
+  console.log('🌐 Fetching:', fullUrl); // 👈 shows the exact URL
+  const response = await fetch(fullUrl);
   if (!response.ok) {
     throw new Error(`Failed to fetch Markdown content: ${filePath}`);
   }
   return response.text();
 };
 
-// Custom dark theme override
 const darkGrayTheme = {
   ...materialLight,
   'pre[class*="language-"]': {
     ...materialLight['pre[class*="language-"]'],
     background: 'rgb(29, 31, 33)',
     boxShadow: 'none',
-    padding: '1rem',
+    padding: '1rem'
   },
   'code[class*="language-"]': {
     ...materialLight['code[class*="language-"]'],
     background: 'rgb(29, 31, 33)',
     color: '#fff',
-    padding: '1rem',
-  },
+    padding: '1rem'
+  }
 };
 
 const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
-  const [markdownContent, setMarkdownContent] = useState<string>("");
+  const [markdownContent, setMarkdownContent] = useState<string>('');
   const [copiedCode, setCopiedCode] = useState(false);
 
   useEffect(() => {
     if (filePath) {
       loadMarkdown(filePath)
         .then(setMarkdownContent)
-        .catch((error) => console.error("Error loading Markdown:", error));
+        .catch((error) => console.error('Error loading Markdown:', error));
     }
   }, [filePath]);
 
@@ -84,7 +89,7 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
           remarkPlugins={[remarkGfm]}
           components={{
             code({ className, children, ...props }) {
-              const language = className?.replace("language-", "") || "";
+              const language = className?.replace('language-', '') || '';
               const codeString = String(children).trim();
 
               return (
@@ -97,7 +102,7 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
                       className="copyCodeButton"
                       onClick={() => copyToClipboard(codeString)}
                     >
-                      {copiedCode ? "Copied!" : "Copy Code"}
+                      {copiedCode ? 'Copied!' : 'Copy Code'}
                     </button>
                   </div>
                   <SyntaxHighlighter
@@ -113,15 +118,21 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
               );
             },
             a({ href, children, ...props }) {
-              if (href?.startsWith("/")) {
+              if (href?.startsWith('/')) {
                 return (
-                  <HashLink to={href} {...props}>
+                  <HashLink
+                    to={href}
+                    {...props}
+                  >
                     {children}
                   </HashLink>
                 );
               }
               return (
-                <a href={href} {...props}>
+                <a
+                  href={href}
+                  {...props}
+                >
                   {children}
                 </a>
               );
@@ -129,12 +140,15 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
             table({ children, ...props }) {
               return (
                 <div className="tableWrapper">
-                  <table className="notesTable" {...props}>
+                  <table
+                    className="notesTable"
+                    {...props}
+                  >
                     {children}
                   </table>
                 </div>
               );
-            },
+            }
           }}
         >
           {markdownContent}

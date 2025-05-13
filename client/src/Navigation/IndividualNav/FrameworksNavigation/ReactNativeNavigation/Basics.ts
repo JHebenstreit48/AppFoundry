@@ -7,7 +7,7 @@ const RNBasicsNavigation: Subpage = {
       name: 'Fundamentals',
       subpages: [
         {
-          name: 'React Native Introduction',
+          name: 'Introduction',
           path: '/reactnative/basics/fundamentals/introduction'
         },
         {

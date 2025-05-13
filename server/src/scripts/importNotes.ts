@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import Note from "../models/notes";
 import { connectToDb } from "../Utility/connection";
 
-const notesDir = path.join(__dirname, "..", "seeds", "Notes");
+const baseDir = path.join(__dirname, "..", "seeds", "Notes");
 
 const loadMarkdownNotes = (dir: string): any[] => {
   const entries: any[] = [];
@@ -19,9 +19,15 @@ const loadMarkdownNotes = (dir: string): any[] => {
     } else if (item.endsWith(".md")) {
       const raw = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(raw);
+
+      const relativeCategory = path.relative(baseDir, path.dirname(fullPath)).replace(/\\/g, "/");
+      const title = data.title || item.replace(".md", "");
+      const notePath = `${relativeCategory}/${title}`;
+
       entries.push({
-        title: data.title || item.replace(".md", ""),
-        category: data.category || path.basename(dir),
+        title,
+        category: data.category || relativeCategory,
+        path: notePath,
         content,
       });
     }
@@ -32,7 +38,7 @@ const loadMarkdownNotes = (dir: string): any[] => {
 
 const seedNotes = async () => {
   await connectToDb();
-  const notes = loadMarkdownNotes(notesDir);
+  const notes = loadMarkdownNotes(baseDir);
   await Note.deleteMany({});
   const result = await Note.insertMany(notes);
   console.log(`✅ Inserted ${result.length} notes`);
