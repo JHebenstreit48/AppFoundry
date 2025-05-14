@@ -35,6 +35,8 @@ const API_BASE_URL =
 
 const isLocal =
   API_BASE_URL.includes('localhost') || API_BASE_URL.startsWith('/');
+  console.log("🔍 ENV USED:", API_BASE_URL);
+
 
 const loadMarkdown = async (filePath: string): Promise<string> => {
   const fullUrl = isLocal
