@@ -10,7 +10,6 @@ import materialLight from 'react-syntax-highlighter/dist/esm/styles/prism/materi
 import BackToTop from '@/Components/PageComponents/Notes/BackToTopButton';
 import '@/SCSS/PageStyles/Notes.scss';
 
-// PrismJS language imports (only what you use)
 import 'react-syntax-highlighter/dist/esm/languages/prism/javascript';
 import 'react-syntax-highlighter/dist/esm/languages/prism/typescript';
 import 'react-syntax-highlighter/dist/esm/languages/prism/markup';
@@ -31,20 +30,24 @@ interface NotesProps {
   markdownContent?: string;
 }
 
-// ✅ Use .env-configured API base URL
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
 
-// ✅ Load Markdown content from the backend
+const isLocal =
+  API_BASE_URL.includes('localhost') || API_BASE_URL.startsWith('/');
+
 const loadMarkdown = async (filePath: string): Promise<string> => {
-  const fullUrl = `${API_BASE_URL}/api/notes/${filePath}`;
+  const fullUrl = isLocal
+    ? `${API_BASE_URL}/notes/${filePath}` // ✅ local
+    : `${API_BASE_URL}/api/notes/${filePath}`; // ✅ deployed
 
-
-  console.log('🌐 Fetching:', fullUrl); // 👈 shows the exact URL
+  console.log('🌐 Fetching:', fullUrl);
   const response = await fetch(fullUrl);
+
   if (!response.ok) {
     throw new Error(`Failed to fetch Markdown content: ${filePath}`);
   }
+
   return response.text();
 };
 
@@ -121,19 +124,13 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
             a({ href, children, ...props }) {
               if (href?.startsWith('/')) {
                 return (
-                  <HashLink
-                    to={href}
-                    {...props}
-                  >
+                  <HashLink to={href} {...props}>
                     {children}
                   </HashLink>
                 );
               }
               return (
-                <a
-                  href={href}
-                  {...props}
-                >
+                <a href={href} {...props}>
                   {children}
                 </a>
               );
@@ -141,10 +138,7 @@ const NotesRender: React.FC<NotesProps> = ({ filePath }) => {
             table({ children, ...props }) {
               return (
                 <div className="tableWrapper">
-                  <table
-                    className="notesTable"
-                    {...props}
-                  >
+                  <table className="notesTable" {...props}>
                     {children}
                   </table>
                 </div>
