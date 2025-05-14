@@ -16,10 +16,11 @@ const PORT = process.env.PORT || 3001;
 // =============================
 app.use(express.json());
 app.use(cors({
-  origin: process.env.CLIENT_ORIGIN || "http://localhost:3000",
+  origin: "*", // ✅ Allow all origins for now
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
+  credentials: false // ❗ Must be false when origin is "*"
 }));
+
 
 // =============================
 //         📦 API Routes
