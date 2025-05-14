@@ -1,31 +1,29 @@
 {
-  "name": "server",
+  "name": "appfoundry-api",
   "version": "1.0.0",
-  "description": "AppFoundry API and database",
-  "main": "dist/index.js",
+  "description": "Backend API for AppFoundry notes project",
+  "main": "src/server.ts",
   "scripts": {
     "start": "ts-node -r tsconfig-paths/register src/server.ts",
     "dev": "ts-node -r tsconfig-paths/register src/server.ts",
-    "start:watch": "nodemon --exec ts-node -r tsconfig-paths/register src/server.ts",
     "seed": "ts-node -r tsconfig-paths/register src/scripts/importNotes.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start:watch": "nodemon --exec ts-node -r tsconfig-paths/register src/server.ts",
+    "start:dev": "npm run start:watch"
   },
-  "author": "Justin Hebenstreit",
-  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.5.0",
+    "dotenv": "^16.4.5",
     "express": "^4.21.2",
-    "gray-matter": "^4.0.3",
-    "mongoose": "^8.14.2"
+    "mongoose": "^8.8.4"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.18",
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.15.17",
-    "nodemon": "^3.1.10",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.3",
+    "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.8.3"
+    "typescript": "^5.2.2"
   }
 }
