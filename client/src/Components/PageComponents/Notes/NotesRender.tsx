@@ -37,7 +37,8 @@ const API_BASE_URL =
 
 // ✅ Load Markdown content from the backend
 const loadMarkdown = async (filePath: string): Promise<string> => {
-  const fullUrl = `${API_BASE_URL}/notes/${filePath}`;
+  const fullUrl = `${API_BASE_URL}/api/notes/${filePath}`;
+
 
   console.log('🌐 Fetching:', fullUrl); // 👈 shows the exact URL
   const response = await fetch(fullUrl);
