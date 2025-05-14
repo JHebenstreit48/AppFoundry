@@ -14,11 +14,13 @@ const PORT = process.env.PORT || 3001;
 // =============================
 //         🔧 Middleware
 // =============================
-app.use(express.json());
 app.use(cors({
-  origin: "*", // ✅ Allow all origins for now
+  origin: [
+    "http://localhost:3000", // if you still test this locally
+    "https://appfoundry.netlify.app"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: false // ❗ Must be false when origin is "*"
+  credentials: false
 }));
 
 
