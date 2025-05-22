@@ -14,8 +14,16 @@
    
    $site-info-content-width: 40rem;
    
+   /* ==============================
+                    Breakpoints          
+      ============================== */
+   $cellphone-portrait: 480px;
+   $cellphone-landscape: 390px;
+   $small-laptop-max: 1366px;
+   $small-laptop-min: 1024px;
+   
    /* =============================
-      Home Page Layout
+         Home Page Layout
       ============================= */
    .homePage {
      display: flex;
@@ -28,7 +36,7 @@
    }
    
    /* =============================
-      Site Info Box
+         Site Info Box
       ============================= */
    .siteInfo {
      margin: 16rem auto 2rem auto;
@@ -46,11 +54,17 @@
      &:hover {
        box-shadow: 0px 0px 20px 6px rgba(0, 255, 255, 0.4);
      }
+   
+     @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+       width: 17rem;
+       font-size: 1.1rem;
+       margin: 11rem auto 3rem auto;
+     }
    }
    
    /* =============================
-      Site Info Content
-      ============================= */
+         Site Info Content
+         ============================= */
    .siteInfoContent {
      max-width: $site-info-content-width;
      margin: 0 auto 2rem auto;
@@ -64,18 +78,10 @@
      p:first-of-type {
        font-weight: 600; // Bold first paragraph
      }
-   }
    
-   /* =============================
-      Responsive Styles (Mobile)
-      ============================= */
-   @media only screen and (max-width: 390px) {
-     .siteInfo {
-       width: $site-info-mobile-width;
-     }
-   
-     .siteInfoContent {
-       max-width: 100%;
+     @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+       max-width: 40rem;
+       text-align: center;
        display: flex;
        flex-direction: column;
        margin: 0 auto;
