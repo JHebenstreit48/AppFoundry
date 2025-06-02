@@ -1,4 +1,4 @@
-import Header from "@/Components/PageComponents/Header";
+import Header from "@/Components/Shared/Header";
 import NotesRender from "@/Components/PageComponents/Notes/NotesRender";
 
 const RNIntro = () => {
@@ -6,7 +6,7 @@ const RNIntro = () => {
 
   return (
     <>
-      <Header text="React Native Introduction" />
+      <Header text="Introduction" />
       <NotesRender filePath={markdownFilePath} />
     </>
   );
