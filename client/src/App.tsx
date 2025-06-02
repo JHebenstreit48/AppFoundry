@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 //     Component Imports
 // ==========================
 
-import Footer from '@/Components/PageComponents/Footer';
-import EntryScreen from "@/Pages/ErrorHomeSplash/EntryScreen";
-import SplashScreen from '@/Pages/ErrorHomeSplash/SplashScreen';
+import Footer from '@/Components/Shared/Footer';
+import EntryScreen from "@/Pages/Special/EntryScreen";
+import SplashScreen from '@/Pages/Special/SplashScreen';
 
 // ==========================
 //        SCSS Imports

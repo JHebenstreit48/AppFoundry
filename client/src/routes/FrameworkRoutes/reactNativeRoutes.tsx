@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 
-import RNIntro from "@/Pages/Frameworks/ReactNative/Basics/Fundamentals/RNIntro";
+import RNIntro from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/Fundamentals/RNIntro";
 
 const frameworkRoutes: RouteObject[] = [
 
