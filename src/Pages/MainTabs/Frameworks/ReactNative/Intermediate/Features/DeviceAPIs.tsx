@@ -1,15 +1,15 @@
 import Header from "@/Components/Shared/Header";
 import NotesRender from "@/Components/PageComponents/Notes/NotesRender";
 
-const RNIntro = () => {
-  const markdownFilePath = "FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Introduction";
+const RNDeviceAPIs = () => {
+  const markdownFilePath = "FrameworksNotes/ReactNativeNotes/Intermediate/Features/DeviceAPIs";
 
   return (
     <>
-      <Header text="Introduction" />
+      <Header text="Device APIs" size="md" />
       <NotesRender filePath={markdownFilePath} />
     </>
   );
 };
 
-export default RNIntro;
+export default RNDeviceAPIs;

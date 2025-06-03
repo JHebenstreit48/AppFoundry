@@ -11,10 +11,9 @@ const RNBasicsNavigation: Subpage = {
           path: '/reactnative/basics/fundamentals/introduction'
         },
         {
-          name: 'Benefits',
-          path: '/reactnative/basics/fundamentals/benefits'
+          name: 'Setup',
+          path: '/reactnative/basics/fundamentals/setup'
         },
-        { name: 'Setup', path: '/reactnative/basics/fundamentals/setup' },
         {
           name: 'Structure',
           path: '/reactnative/basics/fundamentals/structure'
@@ -26,7 +25,7 @@ const RNBasicsNavigation: Subpage = {
       subpages: [
         {
           name: 'JSX & TSX',
-          path: '/reactnative/basics/core/jsx-tsx'
+          path: '/reactnative/basics/core/jsxtsx'
         },
         {
           name: 'Props & State',
@@ -43,19 +42,37 @@ const RNBasicsNavigation: Subpage = {
       ]
     },
     {
-      name: "State",
+      name: 'State',
       subpages: [
-        { name: "useState & Hooks", path: "/reactnative/basics/state/hooks" },
-        { name: "Lifting State", path: "/reactnative/basics/state/lifting" },
-        { name: "Async Storage", path: "/reactnative/basics/state/storage" }
+        {
+          name: 'useState & Hooks',
+          path: '/reactnative/basics/state/hooks'
+        },
+        {
+          name: 'Lifting State',
+          path: '/reactnative/basics/state/lifting'
+        },
+        {
+          name: 'Async Storage',
+          path: '/reactnative/basics/state/storage'
+        }
       ]
     },
     {
-      name: "Navigation",
+      name: 'Navigation',
       subpages: [
-        { name: "Stack Navigation", path: "/reactnative/basics/navigation/stack" },
-        { name: "Tab Navigation", path: "/reactnative/basics/navigation/tab" },
-        { name: "Drawer Navigation", path: "/reactnative/basics/navigation/drawer" }
+        {
+          name: 'Stack Navigation',
+          path: '/reactnative/basics/navigation/stack'
+        },
+        {
+          name: 'Tab Navigation',
+          path: '/reactnative/basics/navigation/tab'
+        },
+        {
+          name: 'Drawer Navigation',
+          path: '/reactnative/basics/navigation/drawer'
+        }
       ]
     }
   ]

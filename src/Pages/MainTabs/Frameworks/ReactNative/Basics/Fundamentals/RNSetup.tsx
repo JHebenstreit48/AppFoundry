@@ -1,15 +1,15 @@
 import Header from "@/Components/Shared/Header";
 import NotesRender from "@/Components/PageComponents/Notes/NotesRender";
 
-const RNIntro = () => {
-  const markdownFilePath = "FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Introduction";
+const RNSetup = () => {
+  const markdownFilePath = "FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Setup";
 
   return (
     <>
-      <Header text="Introduction" />
+      <Header text="Setup" />
       <NotesRender filePath={markdownFilePath} />
     </>
   );
 };
 
-export default RNIntro;
+export default RNSetup;
