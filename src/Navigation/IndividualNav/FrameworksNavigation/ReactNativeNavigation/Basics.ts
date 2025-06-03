@@ -11,10 +11,6 @@ const RNBasicsNavigation: Subpage = {
           path: '/reactnative/basics/fundamentals/introduction'
         },
         {
-          name: 'Benefits',
-          path: '/reactnative/basics/fundamentals/benefits'
-        },
-        {
           name: 'Setup',
           path: '/reactnative/basics/fundamentals/setup'
         },

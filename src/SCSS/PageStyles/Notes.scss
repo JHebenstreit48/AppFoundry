@@ -157,9 +157,15 @@ $small-laptop-min: 1024px;
       border-radius: 3px;
     }
 
+    .bulletWrapper1 {
+      margin-top: 1rem;
+    }
+
     .bullet1,
     .bullet2,
-    .bullet3 {
+    .bullet3,
+    .bullet4,
+    .bullet5 {
       display: inline-block;
       padding-left: 50px !important;
     }
@@ -170,8 +176,12 @@ $small-laptop-min: 1024px;
       color: $bullet-color;
     }
 
-    .bullet2 {
+    .bullet2,
+    .bullet4 {
       column-count: 1;
+    }
+
+    .bullet2 {
       width: 36rem;
     }
 
@@ -179,6 +189,22 @@ $small-laptop-min: 1024px;
       column-count: 3;
       width: 40rem;
       color: $info-color;
+    }
+
+    .bullet4,
+    .bullet5 {
+      margin-left: 1.8rem;
+    }
+
+    .bullet4 {
+      width: 26rem;
+    }
+
+    .bullet5 {
+      margin-bottom: 1rem;
+      padding: 0;
+      top: 0;
+      width: 36rem;
     }
 
     .tableWrapper {
