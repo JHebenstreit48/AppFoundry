@@ -7,18 +7,18 @@ const RNToolsNavigation: Subpage = {
       name: 'Expo',
       subpages: [
         {
-          name: 'Expo CLI',
+          name: 'CLI',
           subpages: [
             {
-              name: 'Overview & Installation',
+              name: 'Overview',
               path: '/reactnative/tools/expo/cli/overview'
             },
             {
-              name: 'Managed Workflow',
-              path: '/reactnative/tools/expo/cli/managed'
+              name: 'Workflow',
+              path: '/reactnative/tools/expo/cli/workflow'
             },
             {
-              name: 'Ejecting from Expo',
+              name: 'Ejecting',
               path: '/reactnative/tools/expo/cli/eject'
             }
           ]
@@ -27,15 +27,15 @@ const RNToolsNavigation: Subpage = {
           name: 'Expo Go',
           subpages: [
             {
-              name: 'Installing & Running',
+              name: 'Installing/Running',
               path: '/reactnative/tools/expo/go/install'
             },
             {
-              name: 'Previewing Projects',
+              name: 'Previewing',
               path: '/reactnative/tools/expo/go/preview'
             },
             {
-              name: 'QR Codes & Device Testing',
+              name: 'QR Codes/Testing',
               path: '/reactnative/tools/expo/go/qr'
             }
           ]
@@ -47,15 +47,15 @@ const RNToolsNavigation: Subpage = {
       subpages: [
         {
           name: 'Overview',
-          path: '/reactnative/tools/cli/overview'
+          path: '/reactnative/tools/rncli/overview'
         },
         {
-          name: 'Project Setup',
-          path: '/reactnative/tools/cli/setup'
+          name: 'Setup',
+          path: '/reactnative/tools/rncli/setup'
         },
         {
           name: 'Running Apps',
-          path: '/reactnative/tools/cli/running'
+          path: '/reactnative/tools/rncli/running'
         }
       ]
     },
@@ -63,11 +63,11 @@ const RNToolsNavigation: Subpage = {
       name: 'Metro Bundler',
       subpages: [
         {
-          name: 'Overview & Purpose',
+          name: 'Overview',
           path: '/reactnative/tools/metro/overview'
         },
         {
-          name: 'Manual Access & Commands',
+          name: 'Manual Access/Commands',
           path: '/reactnative/tools/metro/usage'
         }
       ]
@@ -76,15 +76,15 @@ const RNToolsNavigation: Subpage = {
       name: 'Android Studio',
       subpages: [
         {
-          name: 'Installation & SDK Configuration',
+          name: 'Installation/SDK',
           path: '/reactnative/tools/androidstudio/installation'
         },
         {
-          name: 'Creating Virtual Devices (AVDs)',
+          name: 'Virtual Devices (AVDs)',
           path: '/reactnative/tools/androidstudio/avds'
         },
         {
-          name: 'Running React Native Apps',
+          name: 'Running Apps',
           path: '/reactnative/tools/androidstudio/running'
         }
       ]
@@ -93,15 +93,15 @@ const RNToolsNavigation: Subpage = {
       name: 'Xcode',
       subpages: [
         {
-          name: 'Installation & CLI Tools',
+          name: 'Installation/CLI',
           path: '/reactnative/tools/xcode/installation'
         },
         {
-          name: 'Configuring Simulators',
+          name: 'Simulators',
           path: '/reactnative/tools/xcode/simulators'
         },
         {
-          name: 'Running React Native Apps',
+          name: 'Running Apps',
           path: '/reactnative/tools/xcode/running'
         }
       ]
