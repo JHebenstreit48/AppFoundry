@@ -25,7 +25,7 @@ const RNBasicsNavigation: Subpage = {
       subpages: [
         {
           name: 'JSX & TSX',
-          path: '/reactnative/basics/core/jsx-tsx'
+          path: '/reactnative/basics/core/jsxtsx'
         },
         {
           name: 'Props & State',

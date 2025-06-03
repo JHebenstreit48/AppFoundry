@@ -42,7 +42,7 @@ const RNIntermediateNavigation: Subpage = {
       ]
     },
     {
-      name: 'State Management',
+      name: 'State',
       subpages: [
         {
           name: 'Fetch & Axios',
@@ -55,7 +55,7 @@ const RNIntermediateNavigation: Subpage = {
       ]
     },
     {
-      name: 'Native Features',
+      name: 'Features',
       subpages: [
         {
           name: 'Accessing Device APIs',
