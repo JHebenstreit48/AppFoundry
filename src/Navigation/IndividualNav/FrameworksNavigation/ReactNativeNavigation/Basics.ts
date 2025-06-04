@@ -28,6 +28,10 @@ const RNBasicsNavigation: Subpage = {
           path: '/reactnative/basics/core/jsxtsx'
         },
         {
+          name: 'Components',
+          path: '/reactnative/basics/core/components'
+        },
+        {
           name: 'Props & State',
           path: '/reactnative/basics/core/props-state'
         },
