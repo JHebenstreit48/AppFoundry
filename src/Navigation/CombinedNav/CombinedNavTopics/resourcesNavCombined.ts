@@ -1,7 +1,8 @@
 import { Page } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-// ---------------------------------- React Native Navigation Start ----------------------------------
-// ----------------------------------- React Native Navigation End ------------------------------------
+// ---------------------------------- React Native Resources Navigation Start ----------------------------------
+import RNBasicsResourcesNavigation from '@/Navigation/IndividualNav/ResourcesNavigation/Frameworks/ReactNative/Basics';
+// ----------------------------------- React Native Resources Navigation End ------------------------------------
 
 const resourcesNav: Page = {
   name: 'Resources',
@@ -12,7 +13,7 @@ const resourcesNav: Page = {
         {
           name: 'React Native',
           subpages: [
-            // RNBasicsResourcesNavigation,
+            RNBasicsResourcesNavigation,
             // RNIntermediateResourcesNavigation,
             // RNAdvancedResourcesNavigation,
             // RNTestingResourcesNavigation,

@@ -5,6 +5,7 @@ import ErrorPage from '@/Pages/Special/Error';
 import Home from '@/Pages/Special/Home';
 
 import frameworkRoutes from '@/routes/RoutesDirectories/frameworkRoutesCombined';
+import resourcesRoutes from '@/routes/RoutesDirectories/resourcesRoutesCombined';
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,8 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home />
       },
-      ...frameworkRoutes
+      ...frameworkRoutes,
+      ...resourcesRoutes
     ]
   }
 ]);

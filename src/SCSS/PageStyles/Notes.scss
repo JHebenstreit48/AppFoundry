@@ -327,9 +327,20 @@ $small-laptop-min: 1024px;
       }
     }
 
+    .resourceLinks {
+      color: rgb(0, 255, 34);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+
     .token {
       width: 10rem;
       line-height: 2.4rem;
     }
+
+
   }
 }
