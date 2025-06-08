@@ -7,9 +7,12 @@ import RNJSXTSX from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcept
 import RNComponents from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components";
 import RNPropsState from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsAndState";
 import RNEventHandling from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/EventHandling";
-import RNStyling from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling";
+
+import RNStylingBasics from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Basics";
+import RNStylePropsBasics from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Basics";
 
 import RNDeviceAPIs from "@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Features/DeviceAPIs";
+
 
 
 
@@ -45,10 +48,22 @@ const frameworkRoutes: RouteObject[] = [
     path: '/reactnative/basics/core/events',
     element: <RNEventHandling />,
 },
+// --------------- React Native > Basics > Core Concepts > Styling > Start ---------------
 {
-    path: '/reactnative/basics/core/styling',
-    element: <RNStyling />,
+path: '/reactnative/basics/core/styling/basics',
+element: <RNStylingBasics />,
 },
+
+// --------------- React Native > Basics > Core Concepts > Styling > Properties Start ---------------
+{
+    path: '/reactnative/basics/core/styling/properties/basics',
+    element: <RNStylePropsBasics />,
+},
+
+// --------------- React Native > Basics > Core Concepts > Styling > Properties End ---------------
+
+// --------------- React Native > Basics > Core Concepts > Styling > End ---------------
+
 // --------------- React Native Basics > Core Concepts End ---------------
 
 // --------------- React Native Intermediate > Features ---------------
