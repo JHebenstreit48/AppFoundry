@@ -1,11 +1,11 @@
 import { Page } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
 // ---------------------------------- React Native Navigation Start ----------------------------------
-import RNBasicsNavigation from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Basics';
-import RNIntermediateNavigation from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Intermediate';
-import RNAdvancedNavigation from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Advanced';
-import RNTestingNavigation from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Testing';
-import RNToolsNavigation from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Tools';
+import RNBasicsNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Basics/Basics';
+import RNIntermediateNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Intermediate';
+import RNAdvancedNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Advanced';
+import RNTestingNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Testing';
+import RNToolsNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Tools';
 // ----------------------------------- React Native Navigation End ------------------------------------
 
 const frameworksNav: Page = {
@@ -14,11 +14,11 @@ const frameworksNav: Page = {
     {
       name: 'React Native',
       subpages: [
-        RNBasicsNavigation,
-        RNIntermediateNavigation,
-        RNAdvancedNavigation,
-        RNTestingNavigation,
-        RNToolsNavigation
+        RNBasicsNav,
+        RNIntermediateNav,
+        RNAdvancedNav,
+        RNTestingNav,
+        RNToolsNav
       ]
     }
   ]
