@@ -1,12 +1,12 @@
 import Header from "@/Components/Shared/Header";
 import Notes from "@/Components/PageComponents/Notes/NotesRender";
 
-const RNComponents = () => {
-    const markdownFilePath = "FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/Components";
+const RNComponentBuiltIn = () => {
+    const markdownFilePath = "FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/ComponentsNotes/BuiltIn";
 
     return (
         <>
-            <Header text="Components" />
+            <Header text="Built-In" />
             <Notes
                 filePath={markdownFilePath}
                 markdownContent="markdownContent"
@@ -15,4 +15,4 @@ const RNComponents = () => {
     );
 };
 
-export default RNComponents;
+export default RNComponentBuiltIn;
