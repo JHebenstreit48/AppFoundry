@@ -30,6 +30,7 @@
     "rehype-slug": "^6.0.0",
     "remark-gfm": "^4.0.0",
     "remark-slug": "^7.0.1",
+    "unist-util-visit": "^5.0.0",
     "vfile": "^6.0.3",
     "vfile-message": "^4.0.2"
   },
