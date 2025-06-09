@@ -2,10 +2,10 @@ import { Page } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTyp
 
 // ---------------------------------- React Native Navigation Start ----------------------------------
 import RNBasicsNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Basics/Basics';
-import RNIntermediateNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Intermediate';
-import RNAdvancedNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Advanced';
-import RNTestingNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Testing';
-import RNToolsNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Tools';
+import RNIntermediateNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Intermediate/Intermediate';
+import RNAdvancedNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/Advanced/Advanced';
+import RNTestingNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/TestingNav/Testing';
+import RNToolsNav from '@/Navigation/IndividualNav/FrameworksNavigation/ReactNativeNavigation/ToolsNav/Tools';
 // ----------------------------------- React Native Navigation End ------------------------------------
 
 const frameworksNav: Page = {
