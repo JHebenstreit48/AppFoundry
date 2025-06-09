@@ -1,6 +1,6 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header';
-import NotesRender from '@/Components/PageComponents/Notes/NotesRendering/NotesRender';
+import Notes from '@/Components/PageComponents/Notes/NotesRendering/Notes';
 
 const RNDeviceAPIs = () => {
   const markdownFilePath =
@@ -9,11 +9,8 @@ const RNDeviceAPIs = () => {
   return (
     <>
       <PageLayout>
-        <Header
-          text="Device APIs"
-          size="md"
-        />
-        <NotesRender filePath={markdownFilePath} />
+        <Header text="Device APIs" size="md" />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
