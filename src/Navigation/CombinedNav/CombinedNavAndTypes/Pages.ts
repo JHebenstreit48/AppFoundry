@@ -1,8 +1,8 @@
 import { Page } from "@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes";
 
 import frameworksNav from "@/Navigation/CombinedNav/CombinedNavTopics/frameworksNavCombined";
-import languagesNav from "@/Navigation/CombinedNav/CombinedNavTopics/languagesNavCombined";
 import enginesNav from "@/Navigation/CombinedNav/CombinedNavTopics/enginesNavCombined";
+import languagesNav from "@/Navigation/CombinedNav/CombinedNavTopics/languagesNavCombined";
 import resourcesNav from "@/Navigation/CombinedNav/CombinedNavTopics/resourcesNavCombined";
 
 const pages: Page[] = [
@@ -11,8 +11,8 @@ const pages: Page[] = [
     subpages: [],
   },
 frameworksNav,
-languagesNav,
 enginesNav,
+languagesNav,
 resourcesNav
 ];
 
