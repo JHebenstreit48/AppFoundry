@@ -1,6 +1,6 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header';
-import NotesRender from '@/Components/PageComponents/Notes/NotesRendering/NotesRender';
+import Notes from '@/Components/PageComponents/Notes/NotesRendering/Notes';
 
 const RNBasicsResources = () => {
   const markdownFilePath = 'ResourcesNotes/Frameworks/ReactNative/Basics';
@@ -9,7 +9,7 @@ const RNBasicsResources = () => {
     <>
       <PageLayout>
         <Header text="Basics" />
-        <NotesRender filePath={markdownFilePath} />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );

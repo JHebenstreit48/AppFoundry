@@ -1,6 +1,6 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header';
-import Notes from '@/Components/PageComponents/Notes/NotesRendering/NotesRender';
+import Notes from '@/Components/PageComponents/Notes/NotesRendering/Notes';
 
 const RNComponentBuiltIn = () => {
   const markdownFilePath =
@@ -12,7 +12,6 @@ const RNComponentBuiltIn = () => {
         <Header text="Built-In" />
         <Notes
           filePath={markdownFilePath}
-          markdownContent="markdownContent"
         />
       </PageLayout>
     </>

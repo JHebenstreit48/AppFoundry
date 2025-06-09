@@ -10,7 +10,9 @@ const RNIntro = () => {
     <>
       <PageLayout>
         <Header text="Introduction" />
-        <Notes filePath={markdownFilePath} />
+        <Notes
+        filePath={markdownFilePath}
+         />
       </PageLayout>
     </>
   );
