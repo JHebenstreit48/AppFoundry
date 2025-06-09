@@ -1,13 +1,17 @@
-import Header from "@/Components/Shared/Header";
-import NotesRender from "@/Components/PageComponents/Notes/NotesRender";
+import PageLayout from '@/Components/NavigationUI/PageLayout';
+import Header from '@/Components/Shared/Header';
+import Notes from '@/Components/PageComponents/Notes/NotesRendering/Notes';
 
 const RNIntro = () => {
-  const markdownFilePath = "FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Introduction";
+  const markdownFilePath =
+    'FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Introduction';
 
   return (
     <>
-      <Header text="Introduction" />
-      <NotesRender filePath={markdownFilePath} />
+      <PageLayout>
+        <Header text="Introduction" />
+        <Notes filePath={markdownFilePath} />
+      </PageLayout>
     </>
   );
 };

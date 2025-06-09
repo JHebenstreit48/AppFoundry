@@ -1,3 +1,4 @@
+import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from "@/Components/Shared/Header";
 import '@/SCSS/PageStyles/Home.scss';
 
