@@ -21,6 +21,22 @@ const Notes = ({ filePath }: NotesProps) => {
     }
   }, [filePath]);
 
+  // ⬇️ Second useEffect: Scroll to anchor after content loads
+  useEffect(() => {
+    if (markdownContent && typeof window !== 'undefined') {
+      const hash = window.location.hash;
+      if (hash) {
+        const id = hash.substring(1);
+        const el = document.getElementById(id);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ block: 'start', behavior: 'auto' });
+          }, 0);
+        }
+      }
+    }
+  }, [markdownContent]);
+
   const copyToClipboard = (code: string) => {
     navigator.clipboard.writeText(code);
     setCopiedCode(true);
