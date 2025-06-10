@@ -110,6 +110,16 @@ $small-laptop-min: 1024px;
       }
     }
 
+    // Fix scroll offset when using in-page anchor links (e.g. #components)
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      scroll-margin-top: 13rem; // Adjust based on your nav height
+    }
+
     p {
       width: 85%;
       margin: 0 auto;
@@ -129,6 +139,23 @@ $small-laptop-min: 1024px;
       @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
         width: 21rem;
       }
+    }
+
+    .subSectionRuleTop,
+    .subSectionRuleBottom {
+      border: 1.5px solid $primary-color;
+      opacity: 1;
+      box-shadow: 2px 2px 2px black;
+      width: 30rem;
+    }
+
+    .subSectionRuleTop {
+      margin-top: 2rem;
+    }
+
+    .subSectionRuleBottom {
+      margin: 0 auto 1.5rem auto;
+      
     }
 
     .emphasis {
@@ -215,23 +242,23 @@ $small-laptop-min: 1024px;
       margin: 0 auto;
 
       @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        margin: 0 auto;
+        overflow-x: hidden; // ensure no horizontal scroll
+
+        .notesTable {
           width: 100%;
-          padding: 0 1rem;
-          box-sizing: border-box;
-          margin: 0 auto;
-          overflow-x: hidden; // ensure no horizontal scroll
-      
-          .notesTable {
-            width: 100%;
-            table-layout: fixed;
-            border-collapse: collapse;
-            text-align: center;
-          }
-      
-          .tableCellHeader,
-          .tableCell,
-          .centeredCell {
-            word-wrap: break-word;
+          table-layout: fixed;
+          border-collapse: collapse;
+          text-align: center;
+        }
+
+        .tableCellHeader,
+        .tableCell,
+        .centeredCell {
+          word-wrap: break-word;
         }
       }
 
@@ -330,7 +357,9 @@ $small-laptop-min: 1024px;
     .resourceLinks {
       color: rgb(0, 255, 34);
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
+      width: 95%;
       justify-content: center;
       align-items: center;
       margin: 0 auto;
@@ -340,7 +369,5 @@ $small-laptop-min: 1024px;
       width: 10rem;
       line-height: 2.4rem;
     }
-
-
   }
 }
