@@ -1,14 +1,10 @@
 import { Subpage } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-const RNCoreMainNav: Subpage[] = [
+const RNJSXTSXNav: Subpage[] = [
   {
     name: 'JSX & TSX',
     path: '/reactnative/basics/core/jsxtsx'
-  },
-  {
-    name: 'Event Handling',
-    path: '/reactnative/basics/core/events'
   }
 ];
 
-export default RNCoreMainNav;
+export default RNJSXTSXNav;

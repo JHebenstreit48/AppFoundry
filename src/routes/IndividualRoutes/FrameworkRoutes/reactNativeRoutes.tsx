@@ -8,8 +8,8 @@ import RNStructure from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/Fundamen
 
 // Core Concepts - JSX and TSX, Event Handling, Props and State Start
 import RNJSXTSX from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/JSXAndTSX";
-import RNEventHandling from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/EventHandling";
-import RNPropsState from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsAndState";
+import RNProps from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsAndState/Props";
+import RNState from "@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsAndState/State";
 // Core Concepts - JSX and TSX, Event Handling, Props and State End
 
 // Core Concepts - Components - Start
@@ -55,8 +55,12 @@ const frameworkRoutes: RouteObject[] = [
     element: <RNJSXTSX />,
 },
 {
-    path: '/reactnative/basics/core/eventhandling',
-    element: <RNEventHandling />,
+    path: '/reactnative/basics/core/propsstate/props',
+    element: <RNProps />,
+},
+{
+    path: '/reactnative/basics/core/propsstate/state',
+    element: <RNState />,
 },
 // --------------- React Native > Basics > Core Concepts > Components > Start ---------------
 {
@@ -72,14 +76,7 @@ const frameworkRoutes: RouteObject[] = [
     element: <RNComponentBuiltIn />
 },
 // -- --------------- React Native > Basics > Core Concepts > Components > End ---------------
-{
-    path: '/reactnative/basics/core/props-state',
-    element: <RNPropsState />,
-},
-{
-    path: '/reactnative/basics/core/events',
-    element: <RNEventHandling />,
-},
+
 // --------------- React Native > Basics > Core Concepts > Styling > Start ---------------
 {
 path: '/reactnative/basics/core/styling/basics',
