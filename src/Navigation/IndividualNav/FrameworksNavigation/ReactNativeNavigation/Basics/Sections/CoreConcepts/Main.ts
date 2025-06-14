@@ -6,10 +6,6 @@ const RNCoreMainNav: Subpage[] = [
     path: '/reactnative/basics/core/jsxtsx'
   },
   {
-    name: 'Props & State',
-    path: '/reactnative/basics/core/propsstate'
-  },
-  {
     name: 'Event Handling',
     path: '/reactnative/basics/core/events'
   }
