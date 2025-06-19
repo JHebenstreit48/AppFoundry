@@ -10,7 +10,11 @@ const RNPropsStateNav: Subpage = {
     {
       name: 'State',
       path: '/reactnative/basics/core/propsstate/state'
-    }
+    },
+    {
+      name: 'Event Handling',
+      path: '/reactnative/basics/core/propsstate/eventhandling'
+    }    
   ]
 };
 
