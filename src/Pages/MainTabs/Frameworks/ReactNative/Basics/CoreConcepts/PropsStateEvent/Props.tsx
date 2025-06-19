@@ -4,7 +4,7 @@ import Notes from '@/Components/PageComponents/Notes/NotesRendering/Notes';
 
 const RNProps = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/Props';
+    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/PropsStateEvent/Props';
 
   return (
     <>

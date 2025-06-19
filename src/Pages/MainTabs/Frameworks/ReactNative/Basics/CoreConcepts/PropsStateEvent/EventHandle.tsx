@@ -2,14 +2,14 @@ import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header';
 import Notes from '@/Components/PageComponents/Notes/NotesRendering/Notes';
 
-const RNState = () => {
+const RNEventHandle = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/PropsAndState/State';
+    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/PropsStateEvent/EventHandle';
 
   return (
     <>
       <PageLayout>
-        <Header text="State" />
+        <Header text="Event Handling" />
         <Notes
           filePath={markdownFilePath}
         />
@@ -18,4 +18,4 @@ const RNState = () => {
   );
 };
 
-export default RNState;
+export default RNEventHandle;
