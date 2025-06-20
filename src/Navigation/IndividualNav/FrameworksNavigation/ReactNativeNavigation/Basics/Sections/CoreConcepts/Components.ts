@@ -14,6 +14,10 @@ const RNComponentsNav: Subpage = {
     {
       name: 'Built-In',
       path: '/reactnative/basics/core/components/builtin'
+    },
+    {
+      name: 'Patterns',
+      path: '/reactnative/basics/core/components/patterns'
     }
   ]
 };
