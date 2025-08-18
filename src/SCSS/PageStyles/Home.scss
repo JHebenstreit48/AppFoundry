@@ -1,3 +1,5 @@
+@use "sass:color";
+
 /* =============================
    Variables
    ============================= */
@@ -8,22 +10,23 @@ $box-shadow-color: black;
 $default-box-shadow: black;
 $accent-glow: rgba(0, 255, 255, 0.2); // Aqua glow
 
-$site-info-width: 50rem;
+$site-info-width: 58rem;
 $site-info-mobile-width: 23rem;
-$site-info-padding: 3rem;
+$site-info-padding: 2rem;
 
-$site-info-content-width: 40rem;
+$site-info-content-width: 60rem;
+
+// Match link blue from Notes.scss for visual consistency
+$primary-color: rgb(6, 159, 248);
 
 /* ==============================
-                 Breakpoints          
+            Breakpoints        
    ============================== */
-$cellphone-portrait: 480px;
+$cellphone-portrait: 390px;
 $cellphone-landscape: 390px;
-$small-laptop-max: 1366px;
-$small-laptop-min: 1024px;
 
 /* =============================
-      Home Page Layout
+   Home Page Layout
    ============================= */
 .homePage {
   display: flex;
@@ -36,10 +39,10 @@ $small-laptop-min: 1024px;
 }
 
 /* =============================
-      Site Info Box
+   Site Info Box
    ============================= */
 .siteInfo {
-  margin: 16rem auto 2rem auto;
+  margin: 12rem auto 2rem auto;
   padding: $site-info-padding;
   text-align: center;
   width: $site-info-width;
@@ -47,7 +50,7 @@ $small-laptop-min: 1024px;
   font-size: 1.5rem;
   background-color: $primary-bg-color;
   box-shadow: 0px 0px 15px 4px $accent-glow;
-  border: 1px solid rgba(0, 255, 255, 0.25); // Slight aqua tint to echo the glow
+  border: 1px solid rgba(0, 255, 255, 0.25); // Aqua border accent
   border-radius: 1rem;
   transition: box-shadow 0.3s ease;
 
@@ -56,34 +59,135 @@ $small-laptop-min: 1024px;
   }
 
   @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
-    width: 17rem;
-    font-size: 1.1rem;
-    margin: 11rem auto 3rem auto;
-  }
-}
-
-/* =============================
-      Site Info Content
-      ============================= */
-.siteInfoContent {
-  max-width: $site-info-content-width;
-  margin: 0 auto 2rem auto;
-  text-align: left;
-  line-height: 1.6;
-  word-break: break-word;
-  box-sizing: border-box;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-  p:first-of-type {
-    font-weight: 600; // Bold first paragraph
+    width: $site-info-mobile-width;
+    padding: 0;
+    margin: 6rem auto 0 auto;
   }
 
-  @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
-    max-width: 40rem;
+  /* =============================
+     Site Info Content
+     ============================= */
+  .siteInfoContent {
+    max-width: $site-info-content-width;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+    line-height: 1.6;
+    word-break: break-word;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    p:first-of-type {
+      font-weight: 600; // Emphasize first paragraph
+    }
+
+    @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  /* =============================
+     Other Sites Description Section
+     ============================= */
+
+  .otherSitesDescription {
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    line-height: 1.5;
+
+    @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+      display: block;
+      margin: 0 auto;
+      width: 78%;
+    }
+
+    .projectName {
+      font-style: italic;
+      font-weight: 600;
+
+      @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+        display: block;
+        margin: 0;
+      }
+    }
+
+    .projectDesc {
+      font-style: italic;
+      display: inline;
+
+      @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+        display: inline;
+        width: 100%;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  /* =============================
+     Note Box
+     ============================= */
+  .Note {
+    background-color: rgba(90, 90, 90, 0.082);
+    border-left: 4px solid $primary-color;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    text-align: left;
+    line-height: 1.6;
+
+    @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+      text-align: center;
+    }
+  }
+
+  /* =============================
+     Related Projects Section
+     ============================= */
+  .relatedProjects {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: left;
+    list-style-type: none;
+    text-decoration: none;
+
+    @media only screen and (max-width: 390px) {
+      padding: 1rem;
+    }
+
+    .relatedProjectsHeader {
+      font-size: 1.5rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .projectLinks {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+
+      li {
+        margin-bottom: 0.8rem;
+        text-decoration: none;
+
+        @media only screen and (max-width: 390px) {
+          font-size: 1.3rem;
+        }
+      }
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: color.adjust($primary-color, $lightness: 10%);
+        }
+      }
+    }
   }
 }

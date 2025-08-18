@@ -5,14 +5,14 @@
    ============================= */
 $primary-color: rgb(6, 159, 248);
 $secondary-color: rgb(243, 175, 28);
-$danger-color: rgb(255, 77, 77);
+$header-color: rgb(125, 213, 248);
 $emphasis-color: rgb(255, 56, 209);
 $success-color: rgb(47, 185, 20);
 $highlight-color: rgb(175, 28, 243);
 $info-color: rgb(12, 217, 231);
 $bullet-color: rgb(0, 255, 60);
 
-$background-dark: rgb(41, 40, 40);
+$background-dark: rgba(41, 40, 40, 0.4);
 $background-code: rgb(29, 31, 33);
 $background-table: #1b1b1b;
 $background-header: rgb(40, 44, 52);
@@ -54,8 +54,8 @@ $small-laptop-min: 1024px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-  margin: 11rem auto 3rem auto;
+  width: 60%;
+  margin: 4rem auto 3rem auto;
   line-height: 2rem;
   padding: 0 0 2rem;
   background-color: $background-dark;
@@ -74,12 +74,13 @@ $small-laptop-min: 1024px;
   .markdownContent {
     justify-content: center;
     align-items: center;
-    width: 92%;
+    width: 85%;
     margin: 1rem auto;
     color: $primary-color;
     text-shadow: 1px 2px 1px black;
     line-height: 1.5;
     font-size: 20px;
+    padding: 1rem;
 
     @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
       display: flex;
@@ -90,10 +91,19 @@ $small-laptop-min: 1024px;
       padding-top: 1rem;
     }
 
+    .loadingMessage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      font-size: 1.8rem;
+    }
+
     h1 {
       color: $secondary-color;
       text-align: center;
-      font-size: 3rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     h2,
@@ -101,23 +111,13 @@ $small-laptop-min: 1024px;
     h4,
     h5,
     h6 {
-      color: $danger-color;
+      color: $header-color;
       text-shadow: 1px 2px 1px black;
       text-align: center;
 
       @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
         width: 20rem;
       }
-    }
-
-    // Fix scroll offset when using in-page anchor links (e.g. #components)
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      scroll-margin-top: 13rem; // Adjust based on your nav height
     }
 
     p {
@@ -134,28 +134,11 @@ $small-laptop-min: 1024px;
       border: 1.5px solid $primary-color;
       opacity: 1;
       box-shadow: 2px 2px 2px black;
-      width: 42rem;
+      width: 61rem;
 
       @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
         width: 21rem;
       }
-    }
-
-    .subSectionRuleTop,
-    .subSectionRuleBottom {
-      border: 1.5px solid $primary-color;
-      opacity: 1;
-      box-shadow: 2px 2px 2px black;
-      width: 30rem;
-    }
-
-    .subSectionRuleTop {
-      margin-top: 2rem;
-    }
-
-    .subSectionRuleBottom {
-      margin: 0 auto 1.5rem auto;
-      
     }
 
     .emphasis {
@@ -176,135 +159,113 @@ $small-laptop-min: 1024px;
       @include text-emphasis($secondary-color, 30px);
     }
 
-    .codeSnip,
-    .shell {
+    .codeSnip {
       color: $emphasis-color;
-      font: normal 1.3rem/1.5 $font-monospace !important;
-      padding: 2px 4px;
-      border-radius: 3px;
-    }
-
-    .bulletWrapper1 {
-      margin-top: 1rem;
-    }
-
-    .bullet1,
-    .bullet2,
-    .bullet3,
-    .bullet4,
-    .bullet5 {
-      display: inline-block;
-      padding-left: 50px !important;
+      font: normal 1.3rem/1.5 $font-monospace;
     }
 
     .bullet1 {
-      column-count: 2;
-      width: 44rem;
-      color: $bullet-color;
-    }
-
-    .bullet2,
-    .bullet4 {
       column-count: 1;
+      margin: 0.5rem auto 0 auto;
+      list-style-type: disc;
+      width: 75%;
+      padding-left: 4rem;
+
+      li {
+        list-style-type: disc;
+
+        p {
+          margin: 0;
+        }
+      }
     }
 
     .bullet2 {
-      width: 36rem;
+      column-count: 2;
+      width: 55%;
+      margin: 0.5rem auto 0 auto;
+      color: $bullet-color;
+      padding-left: 8rem;
+
+      ul {
+        margin: 0;
+      }
+
+      li {
+        list-style-type: disc;
+        width:10%;
+        p {
+          margin: 0;
+        }
+      }
     }
 
     .bullet3 {
       column-count: 3;
       width: 40rem;
-      color: $info-color;
-    }
-
-    .bullet4,
-    .bullet5 {
-      margin-left: 1.8rem;
     }
 
     .bullet4 {
-      width: 26rem;
-    }
-
-    .bullet5 {
-      margin-bottom: 1rem;
-      padding: 0;
-      top: 0;
-      width: 36rem;
+      column-count: 1;
+      padding-left: 15rem;
     }
 
     .tableWrapper {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      width: 35rem;
-      margin: 0 auto;
-
-      @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
-        width: 100%;
-        padding: 0 1rem;
-        box-sizing: border-box;
-        margin: 0 auto;
-        overflow-x: hidden; // ensure no horizontal scroll
-
-        .notesTable {
-          width: 100%;
-          table-layout: fixed;
-          border-collapse: collapse;
-          text-align: center;
-        }
-
-        .tableCellHeader,
-        .tableCell,
-        .centeredCell {
-          word-wrap: break-word;
-        }
-      }
-
-      .narrowTable {
-        width: 35rem;
-        text-align: center;
-        margin: 0 auto;
-
-        @media screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+      width: 100%;
+    
+      .notesTable {
+        width: 35rem; // Standardize ALL tables
+        border-collapse: collapse;
+        margin: 1rem 0;
+    
+        @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
           width: 100%;
         }
       }
-
+    
       .tableHeader {
         background-color: $table-header-bg;
       }
-
+    
       .tableCellHeader {
         text-align: center;
         padding: 12px;
         border: 1px solid $table-border;
         background-color: $table-cell-bg;
-
+        font-weight: bold;
+    
         @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
-          width: 9.3rem;
+          width: 50%;
+          word-wrap: break-word;
         }
       }
-
+    
       .tableRow:hover {
         background-color: rgba(255, 255, 255, 0.1);
         transition: background-color 0.3s ease-in-out;
       }
-
+    
       .tableCell,
       .centeredCell {
         padding: 10px;
         text-align: left;
         border: 1px solid $table-border;
         background-color: $background-table;
+    
+        @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+          width: 50%;
+          word-wrap: break-word;
+        }
       }
-
+    
       .tableEmphasis {
         @include text-emphasis($secondary-color, 1.4rem);
       }
     }
-
+    
     .codeBlockWrapper {
       position: relative;
       border: 1px solid #444;
@@ -352,17 +313,6 @@ $small-laptop-min: 1024px;
         padding: 0 !important;
         overflow-x: hidden !important;
       }
-    }
-
-    .resourceLinks {
-      color: rgb(0, 255, 34);
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      width: 95%;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
     }
 
     .token {

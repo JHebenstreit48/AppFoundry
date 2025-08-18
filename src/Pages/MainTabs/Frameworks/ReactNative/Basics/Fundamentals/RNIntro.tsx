@@ -1,6 +1,7 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header';
-import Notes from '@/Components/PageComponents/Notes/NotesRendering/Notes';
+import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents//PageTitle';
+import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const RNIntro = () => {
   const markdownFilePath =
@@ -9,7 +10,8 @@ const RNIntro = () => {
   return (
     <>
       <PageLayout>
-        <Header text="Introduction" />
+        <Header />
+        <PageTitle title="Introduction to React Native" />
         <Notes
         filePath={markdownFilePath}
          />
