@@ -3,13 +3,11 @@
 /* ==============================
             Variables           
 ============================== */
-
-$gradient-start: #121212;    // Deep dark mode base
-$gradient-middle: #6200ea;   // Android purple
-$gradient-end: #1a1a1a;      // Slight contrast anchor
+$gradient-middle: #f59e0b;   // amber core (muted to avoid neon)
+$gradient-end: #1a1307;      // very dark brown/ochre-leaning base
 
 $text-color: #ffffff;
-$text-glow: #00ffff;
+$text-glow: #ffd166;         // soft golden glow
 
 $font-size-lg: 60px;
 $font-size-sm: 3rem;
@@ -17,52 +15,48 @@ $font-size-sm: 3rem;
 /* ==============================
            Breakpoints        
 ============================== */
-
 $cellphone-portrait: 390px;
 $cellphone-landscape: 390px;
 
 /* ==============================
      Global Reset / Defaults
 ============================== */
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  background-color: #0d0d0d; // solid for splash/entry
+  background-color: #0d0d0d;
   overflow-x: hidden;
 }
 
 /* ==============================
      Styles for App.tsx Layout
 ============================== */
-
 .appContainer {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   position: relative;
 
-  background: linear-gradient(
-    180deg,
-    $gradient-start 28%,
-    $gradient-middle 70%,
-    $gradient-end 111%
+  background: radial-gradient(
+    circle at center,
+    $gradient-middle 10%,
+    $gradient-end 92%
   );
   background-repeat: no-repeat;
   background-size: cover;
 
-  @supports not (background: linear-gradient(180deg, $gradient-start, $gradient-end)) {
-    background: -webkit-linear-gradient(180deg, $gradient-start 0%, $gradient-middle 50%, $gradient-end 100%);
-    background: -moz-linear-gradient(180deg, $gradient-start 0%, $gradient-middle 50%, $gradient-end 100%);
-    background: -o-linear-gradient(180deg, $gradient-start 0%, $gradient-middle 50%, $gradient-end 100%);
-    background: -ms-linear-gradient(180deg, $gradient-start 0%, $gradient-middle 50%, $gradient-end 100%);
+  @supports not (background: radial-gradient(circle, $gradient-end)) {
+    background: -webkit-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
+    background: -moz-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
+    background: -o-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
+    background: -ms-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
   }
 
   @media only screen and (max-width: $cellphone-portrait) {
-    background: linear-gradient(180deg, $gradient-start 30%, $gradient-end 100%);
+    background: radial-gradient(circle at center, $gradient-end 100%);
     background-size: auto;
     background-position: center;
   }
@@ -71,7 +65,6 @@ html, body {
 /* ==============================
    Override Entry / Splash Pages
 ============================== */
-
 .SplashScreen,
 .EntryScreen {
   background-color: #0d0d0d !important;
