@@ -1,33 +1,37 @@
-// Components/NavigationUI/PageLayout.tsx
-import { ReactNode, useEffect, useMemo } from 'react';
-import { useBreadcrumbTrail } from '@/Navigation/CombinedNav/CombinedNavAndTypes/useBreadCrumbTrail';
-import '@/SCSS/NavigationStyles/PageLayout.scss';
+// src/Components/NavigationUI/PageLayout.tsx
+import { ReactNode, useEffect, useMemo } from "react";
+import { useBreadcrumbTrail } from "@/Navigation/CombinedNav/CombinedNavAndTypes/useBreadCrumbTrail";
+import { SITE_NAME } from "@/Components/Shared/dynamicSiteName";
+import "@/SCSS/NavigationStyles/PageLayout.scss";
 
 type PageLayoutProps = {
   children: ReactNode;
-  /** Optional full override, e.g. "AppFoundry | Home" */
+  /** Optional full override, e.g. "AppFoundry | About" */
   shortTitle?: string;
 };
 
 const PageLayout = ({ children, shortTitle }: PageLayoutProps) => {
   const rawCrumbs = useBreadcrumbTrail();
-  // Filter out falsy/empty crumbs so join("") never happens
+
+  // Trim & filter: remove blanks and whitespace-only crumbs
   const breadcrumb = useMemo(
-    () => rawCrumbs.filter(Boolean),
+    () =>
+      (rawCrumbs ?? [])
+        .map((c) => (typeof c === "string" ? c.trim() : c))
+        .filter((c) => typeof c === "string" && c.length > 0),
     [rawCrumbs]
   );
 
+  const joined = useMemo(() => breadcrumb.join(" > ").trim(), [breadcrumb]);
+
   const computedTitle = useMemo(() => {
-    if (shortTitle?.trim()) return shortTitle.trim();
-    if (breadcrumb.length > 0) return breadcrumb.join(' > ');
-    // No breadcrumb and no shortTitle → leave title alone (use index.html)
-    return '';
-  }, [breadcrumb, shortTitle]);
+    if (shortTitle && shortTitle.trim()) return shortTitle.trim();
+    if (joined) return joined;                // notes pages (unchanged behavior)
+    return `${SITE_NAME} | Home`;             // homepage or truly empty crumbs
+  }, [shortTitle, joined]);
 
   useEffect(() => {
-    if (computedTitle) {
-      document.title = computedTitle;
-    }
+    document.title = computedTitle;           // always set to a non-empty value
   }, [computedTitle]);
 
   return <div className="PageLayout">{children}</div>;
