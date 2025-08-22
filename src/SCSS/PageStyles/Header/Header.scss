@@ -10,8 +10,8 @@ $header-blur: 10px;
 $text-color: #032c2c;
 $text-glow: #00ffff;
 
-$header-height: 4rem;
-$site-name-height: 3rem;
+$header-height: 4.5rem;
+$site-name-height: 4rem;
 $font-size-default: 2.4rem;
 $cellphone-portrait: 480px;
 
@@ -33,7 +33,7 @@ $cellphone-portrait: 480px;
   z-index: 12;
 
   @media only screen and (max-width: $cellphone-portrait) {
-    height: 4.5rem;
+    height: 4rem;
   }
 }
 
@@ -68,6 +68,11 @@ $cellphone-portrait: 480px;
   margin: 0 auto;
   text-align: center;
   height: $site-name-height;
+
+  @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
+    margin-top: 0.5rem;
+    height: 3.5rem;
+  }
 
   // Custom alignment if needed
   &.HeaderAlignLeft {
