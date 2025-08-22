@@ -1,19 +1,23 @@
 @use "sass:color";
 
 /* ==============================
-            Variables           
+            Variables
 ============================== */
-$gradient-middle: #f59e0b;   // amber core (muted to avoid neon)
-$gradient-end: #1a1307;      // very dark brown/ochre-leaning base
+$gradient-middle: #f59e0b;   // amber core
+$gradient-end:    #1a1307;   // deep brown edge
+
+// Optional wide-gamut (ignored on sRGB)
+$gradient-middle-p3: color(display-p3 0.95 0.62 0.08);
+$gradient-end-p3:    color(display-p3 0.10 0.07 0.03);
 
 $text-color: #ffffff;
-$text-glow: #ffd166;         // soft golden glow
+$text-glow:  #ffd166;
 
 $font-size-lg: 60px;
 $font-size-sm: 3rem;
 
 /* ==============================
-           Breakpoints        
+           Breakpoints
 ============================== */
 $cellphone-portrait: 390px;
 $cellphone-landscape: 390px;
@@ -37,38 +41,64 @@ html, body {
 .appContainer {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+  min-height: 100vh;    /* fallback */
+  min-height: 100dvh;   /* iOS-friendly */
   position: relative;
+  isolation: isolate;   /* child glows can't stain the bg */
+  background: transparent; /* ⇐ gradient is drawn on ::before */
 
-  background: radial-gradient(
-    circle at center,
-    $gradient-middle 10%,
-    $gradient-end 92%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* 🔒 LOCKED GRADIENT LAYER */
+  &::before {
+    content: "";
+    position: fixed;      /* covers viewport even on long pages */
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
 
-  @supports not (background: radial-gradient(circle, $gradient-end)) {
-    background: -webkit-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
-    background: -moz-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
-    background: -o-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
-    background: -ms-radial-gradient(circle, $gradient-middle 50%, $gradient-end 100%);
+    /* Desktop baseline */
+    background: radial-gradient(
+      circle at 50% 82%,   /* lower center = brown top band */
+      $gradient-middle 20%,/* more amber vibrancy */
+      $gradient-end 88%    /* subtle brown edge */
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
+  /* Phones */
   @media only screen and (max-width: $cellphone-portrait) {
-    background: radial-gradient(circle at center, $gradient-end 100%);
-    background-size: auto;
-    background-position: center;
+    &::before {
+      background: radial-gradient(
+        circle at 50% 78%,
+        $gradient-middle 26%, /* stronger amber */
+        $gradient-end 90%
+      );
+      background-size: cover;
+      background-position: center;
+    }
   }
-}
 
-/* ==============================
-   Override Entry / Splash Pages
-============================== */
-.SplashScreen,
-.EntryScreen {
-  background-color: #0d0d0d !important;
-  background-image: none !important;
-  min-height: 100vh;
-  color: $text-color;
+  /* Touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    &::before {
+      background: radial-gradient(
+        circle at 50% 78%,
+        $gradient-middle 24%,
+        $gradient-end 88%
+      );
+    }
+  }
+
+  /* Wide-gamut enhancement */
+  @supports (color: color(display-p3 1 0 0)) {
+    @media (color-gamut: p3) {
+      &::before {
+        background: radial-gradient(
+          circle at 50% 78%,
+          $gradient-middle-p3 26%,
+          $gradient-end-p3 90%
+        );
+      }
+    }
+  }
 }
