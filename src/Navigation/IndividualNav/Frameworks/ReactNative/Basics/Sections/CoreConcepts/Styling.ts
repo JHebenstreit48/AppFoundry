@@ -1,6 +1,6 @@
 import { Subpage } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-const RNStylingNav: Subpage = {
+const Styling: Subpage = {
   name: 'Styling',
   subpages: [
     {
@@ -47,4 +47,4 @@ const RNStylingNav: Subpage = {
   ]
 };
 
-export default RNStylingNav;
+export default Styling;

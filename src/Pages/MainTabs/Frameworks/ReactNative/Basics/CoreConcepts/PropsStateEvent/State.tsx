@@ -1,21 +1,21 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNState = () => {
+const State = () => {
   const markdownFilePath =
     'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/PropsStateEvent/State';
 
   return (
     <>
       <PageLayout>
-        <Header text="State" />
-        <Notes
-          filePath={markdownFilePath}
-        />
+        <Header />
+        <PageTitle title="Understanding State in React Native" />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
 };
 
-export default RNState;
+export default State;

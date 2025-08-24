@@ -1,21 +1,21 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNStructure = () => {
+const Structure = () => {
   const markdownFilePath =
     'FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Structure';
 
   return (
     <>
       <PageLayout>
-        <Header text="Structure" />
-        <Notes
-          filePath={markdownFilePath}
-        />
+        <Header />
+        <PageTitle title="React Native Project Structure" />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
 };
 
-export default RNStructure;
+export default Structure;

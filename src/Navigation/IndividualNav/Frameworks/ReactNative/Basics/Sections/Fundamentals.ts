@@ -1,21 +1,21 @@
 import { Subpage } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-const RNFundamentalsNav: Subpage = {
+const Fundamentals: Subpage = {
   name: 'Fundamentals',
   subpages: [
     {
       name: 'Introduction',
-      path: '/reactnative/basics/fundamentals/introduction'
+      path: '/react-native/basics/fundamentals/introduction'
     },
     {
       name: 'Setup',
-      path: '/reactnative/basics/fundamentals/setup'
+      path: '/react-native/basics/fundamentals/setup'
     },
     {
       name: 'Structure',
-      path: '/reactnative/basics/fundamentals/structure'
+      path: '/react-native/basics/fundamentals/structure'
     }
   ]
 };
 
-export default RNFundamentalsNav;
+export default Fundamentals;
