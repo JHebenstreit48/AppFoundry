@@ -3,12 +3,11 @@
 /* ==============================
             Variables
 ============================== */
-$gradient-middle: #f59e0b;   // amber core
-$gradient-end:    #1a1307;   // deep brown edge
+$gradient-middle: #7a1f2a;   // crimson/rose
+$gradient-end:    #0c0607;   // obsidian
 
-// Optional wide-gamut (ignored on sRGB)
-$gradient-middle-p3: color(display-p3 0.95 0.62 0.08);
-$gradient-end-p3:    color(display-p3 0.10 0.07 0.03);
+$gradient-middle-p3: color(display-p3 0.09 0.59 0.66);
+$gradient-end-p3:    color(display-p3 0.02 0.06 0.08);
 
 $text-color: #ffffff;
 $text-glow:  #ffd166;
