@@ -5,19 +5,19 @@ const Components: Subpage = {
   subpages: [
     {
       name: 'Basics',
-      path: '/reactnative/basics/core/components/basics'
+      path: '/react-native/basics/core/components/basics'
     },
     {
       name: 'Core',
-      path: '/reactnative/basics/core/components/core'
+      path: '/react-native/basics/core/components/core'
     },
     {
       name: 'Built-In',
-      path: '/reactnative/basics/core/components/builtin'
+      path: '/react-native/basics/core/components/built-in'
     },
     {
       name: 'Patterns',
-      path: '/reactnative/basics/core/components/patterns'
+      path: '/react-native/basics/core/components/patterns'
     }
   ]
 };

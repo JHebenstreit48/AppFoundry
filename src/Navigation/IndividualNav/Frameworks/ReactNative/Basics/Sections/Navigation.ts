@@ -4,16 +4,16 @@ const RNNavNav: Subpage = {
   name: 'Navigation',
   subpages: [
     {
-      name: 'Stack Navigation',
-      path: '/reactnative/basics/navigation/stack'
+      name: 'Stack',
+      path: '/react-native/basics/navigation/stack'
     },
     {
-      name: 'Tab Navigation',
-      path: '/reactnative/basics/navigation/tab'
+      name: 'Tab',
+      path: '/react-native/basics/navigation/tab'
     },
     {
-      name: 'Drawer Navigation',
-      path: '/reactnative/basics/navigation/drawer'
+      name: 'Drawer',
+      path: '/react-native/basics/navigation/drawer'
     }
   ]
 };

@@ -9,7 +9,7 @@ const JSXTSXEvent: Subpage = {
     },
     {
       name: 'Event Handling',
-      path: '/reactnative/basics/core/props-and-state/event-handling'
+      path: '/react-native/basics/core/props-and-state/event-handling'
     }
   ]
 };

@@ -5,11 +5,11 @@ const PropsState: Subpage = {
   subpages: [
     {
       name: 'Props',
-      path: '/reactnative/basics/core/propsstate/props'
+      path: '/react-native/basics/core/props-and-state/props'
     },
     {
       name: 'State',
-      path: '/reactnative/basics/core/propsstate/state'
+      path: '/react-native/basics/core/props-and-state/state'
     },   
   ]
 };
