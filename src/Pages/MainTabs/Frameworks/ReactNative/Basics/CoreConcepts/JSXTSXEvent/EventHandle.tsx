@@ -1,15 +1,18 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNEventHandle = () => {
+
+const EventHandle = () => {
   const markdownFilePath =
     'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/PropsStateEvent/EventHandle';
 
   return (
     <>
       <PageLayout>
-        <Header text="Event Handling" />
+        <Header />
+        <PageTitle title="Event Handling in React Native" />
         <Notes
           filePath={markdownFilePath}
         />
@@ -18,4 +21,4 @@ const RNEventHandle = () => {
   );
 };
 
-export default RNEventHandle;
+export default EventHandle;

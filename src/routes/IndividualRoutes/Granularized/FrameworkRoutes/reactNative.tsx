@@ -1,15 +1,9 @@
 import { RouteObject } from 'react-router-dom';
 
-// Core Concepts - Start
-
-// Core Concepts - JSX and TSX Start
-import RNJSXTSX from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/JSXAndTSX';
-// Core Concepts - JSX and TSX End
-
 // Core Concepts - Props, State, Event Handling Start
-import RNProps from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsStateEvent/Props';
+import Props from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsStateEvent/Props';
 import State from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsStateEvent/State';
-import RNEventHandle from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsStateEvent/EventHandle';
+import EventHandle from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent/EventHandle';
 // Core Concepts - JSX and TSX, Event Handling, Props and State End
 
 // Core Concepts - Components - Start
@@ -35,21 +29,16 @@ const frameworks: RouteObject[] = [
   // --------------- React Native > Basics > Core Concepts Start ---------------
 
   {
-    path: '/react-native/basics/core/jsx-and-tsx',
-    element: <RNJSXTSX />
-  },
-
-  {
-    path: '/reactnative/basics/core/propsstate/props',
-    element: <RNProps />
+    path: '/react-native/basics/core/props-and-state/props',
+    element: <Props />
   },
   {
-    path: '/reactnative/basics/core/propsstate/state',
+    path: '/react-native/basics/core/props-and-state/state',
     element: <State />
   },
   {
-    path: '/reactnative/basics/core/propsstate/eventhandling',
-    element: <RNEventHandle /> // Assuming this is a placeholder, replace with actual component for
+    path: '/react-native/basics/core/propsstate/eventhandling',
+    element: <EventHandle /> // Assuming this is a placeholder, replace with actual component for
   },
   // --------------- React Native > Basics > Core Concepts > Components > Start ---------------
   {

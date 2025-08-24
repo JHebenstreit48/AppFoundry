@@ -1,6 +1,6 @@
 import { Subpage } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-const RNIntermediateNavigation: Subpage = {
+const Intermediate: Subpage = {
   name: 'Intermediate',
   subpages: [
     {
@@ -8,19 +8,19 @@ const RNIntermediateNavigation: Subpage = {
       subpages: [
         {
           name: 'Using Formik',
-          path: '/reactnative/intermediate/forms/formik'
+          path: '/react-native/intermediate/forms/formik'
         },
         {
           name: 'Yup Validation',
-          path: '/reactnative/intermediate/forms/yup'
+          path: '/react-native/intermediate/forms/yup-validation'
         },
         {
           name: 'Error Messages & Feedback',
-          path: '/reactnative/intermediate/forms/errors'
+          path: '/react-native/intermediate/forms/errors-and-feedback'
         },
         {
           name: 'Handling Inputs & Focus',
-          path: '/reactnative/intermediate/forms/focus'
+          path: '/react-native/intermediate/forms/inputs-and-focus'
         }
       ]
     },
@@ -29,15 +29,15 @@ const RNIntermediateNavigation: Subpage = {
       subpages: [
         {
           name: 'Conditional Routes',
-          path: '/reactnative/intermediate/navigation/conditional'
+          path: '/react-native/intermediate/navigation/conditional-routes'
         },
         {
           name: 'Deep Linking',
-          path: '/reactnative/intermediate/navigation/linking'
+          path: '/react-native/intermediate/navigation/deep-linking'
         },
         {
           name: 'Navigation Performance',
-          path: '/reactnative/intermediate/navigation/performance'
+          path: '/react-native/intermediate/navigation/performance'
         }
       ]
     },
@@ -46,11 +46,11 @@ const RNIntermediateNavigation: Subpage = {
       subpages: [
         {
           name: 'Fetch & Axios',
-          path: '/reactnative/intermediate/state/fetch'
+          path: '/react-native/intermediate/state/fetch-and-axios'
         },
         {
           name: 'Managing API State',
-          path: '/reactnative/intermediate/state/apistate'
+          path: '/react-native/intermediate/state/api-state'
         }
       ]
     },
@@ -59,19 +59,19 @@ const RNIntermediateNavigation: Subpage = {
       subpages: [
         {
           name: 'Accessing Device APIs',
-          path: '/reactnative/intermediate/native/deviceapis'
+          path: '/react-native/intermediate/native/device-apis'
         },
         {
           name: 'Permissions',
-          path: '/reactnative/intermediate/native/permissions'
+          path: '/react-native/intermediate/native/permissions'
         },
         {
           name: 'Native Modules',
-          path: '/reactnative/intermediate/native/modules'
+          path: '/react-native/intermediate/native/modules'
         }
       ]
     }
   ]
 };
 
-export default RNIntermediateNavigation;
+export default Intermediate;

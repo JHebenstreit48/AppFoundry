@@ -1,15 +1,17 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNJSXTSX = () => {
+const JSXTSX = () => {
   const markdownFilePath =
     'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/JSXAndTSX';
 
   return (
     <>
       <PageLayout>
-        <Header text="JSX/TSX" size="md" />
+        <Header />
+        <PageTitle title="JSX & TSX in React Native" />
         <Notes
           filePath={markdownFilePath}
         />
@@ -18,4 +20,4 @@ const RNJSXTSX = () => {
   );
 };
 
-export default RNJSXTSX;
+export default JSXTSX;
