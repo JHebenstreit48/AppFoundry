@@ -1,6 +1,6 @@
 import { Subpage } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-const RNComponentsNav: Subpage = {
+const Components: Subpage = {
   name: 'Components',
   subpages: [
     {
@@ -22,4 +22,4 @@ const RNComponentsNav: Subpage = {
   ]
 };
 
-export default RNComponentsNav;
+export default Components;

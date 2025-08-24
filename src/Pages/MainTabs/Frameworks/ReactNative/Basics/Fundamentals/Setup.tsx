@@ -1,17 +1,17 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents//PageTitle';
+import PageTitle from '@/Components/PageComponents/PageTitle'
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNIntro = () => {
+const Setup = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Introduction';
+    'FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Setup';
 
   return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="Introduction to React Native" />
+        <PageTitle title="React Native Project Setup" /> 
         <Notes
         filePath={markdownFilePath}
          />
@@ -20,4 +20,4 @@ const RNIntro = () => {
   );
 };
 
-export default RNIntro;
+export default Setup;

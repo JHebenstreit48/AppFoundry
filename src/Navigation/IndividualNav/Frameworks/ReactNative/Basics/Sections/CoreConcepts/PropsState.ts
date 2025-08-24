@@ -1,6 +1,6 @@
 import { Subpage } from '@/Navigation/CombinedNav/CombinedNavAndTypes/NavigationTypes';
 
-const RNPropsStateNav: Subpage = {
+const PropsState: Subpage = {
   name: 'Props & State',
   subpages: [
     {
@@ -10,12 +10,8 @@ const RNPropsStateNav: Subpage = {
     {
       name: 'State',
       path: '/reactnative/basics/core/propsstate/state'
-    },
-    {
-      name: 'Event Handling',
-      path: '/reactnative/basics/core/propsstate/eventhandling'
-    }    
+    },   
   ]
 };
 
-export default RNPropsStateNav;
+export default PropsState;
