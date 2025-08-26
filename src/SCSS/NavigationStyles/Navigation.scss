@@ -1,7 +1,7 @@
 @use 'sass:color';
 
 /* ==============================
-            Variables           
+            Variables
    ============================== */
 
 $level-1: rgb(7, 193, 255);
@@ -21,7 +21,7 @@ $font-xs: 1rem;
 $dropdown-width: 17rem;
 
 /* ==============================
-           Breakpoints          
+           Breakpoints
    ============================== */
 $cellphone-portrait: 480px;
 $cellphone-landscape: 390px;
@@ -29,7 +29,7 @@ $small-laptop-max: 1366px;
 $small-laptop-min: 1024px;
 
 /* ==============================
-        Hamburger Menu Button    
+        Hamburger Menu Button
    ============================== */
 .hamburgerButton {
   display: none;
@@ -49,7 +49,7 @@ $small-laptop-min: 1024px;
 }
 
 /* ==============================
-         Navigation Menu         
+         Navigation Menu
    ============================== */
 .navigationMenu {
   width: 100%;
@@ -61,31 +61,28 @@ $small-laptop-min: 1024px;
   padding: 0;
   transition: all 0.3s ease;
   margin-left: auto; // Pushes nav to the right inside HeaderBar
-  // Remove top positioning now that it's inside HeaderBar
   position: fixed;
-  
+
   @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
     position: relative;
-    left: 0; // ✅ Reset the position for mobile
+    left: 0; // Reset the position for mobile
     margin-top: 0.5rem;
-    justify-content: flex-end; // ✅ Align hamburger right
+    justify-content: flex-end; // Align hamburger right
     right: 0.5rem;
     width: 100%;
   }
 }
 
 /* ==============================
-          Navigation Content         
+          Navigation Content
    ============================== */
 .navigationContent {
-  // Show normally on large screens
   display: flex;
   flex-direction: row;
   align-items: center;
   width: auto;
   padding-top: 0;
 
-  // ✅ MOBILE ONLY – hide by default, show when .open
   @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
     display: none;
 
@@ -105,8 +102,8 @@ $small-laptop-min: 1024px;
 }
 
 /* ==============================
-          Search Icon Container        
-         ============================== */
+          Search Icon Container
+   ============================== */
 .searchIconContainer {
   position: absolute;
   left: 50rem;
@@ -127,7 +124,7 @@ $small-laptop-min: 1024px;
 }
 
 /* ==============================
-           Search Icon Button          
+           Search Icon Button
    ============================== */
 .searchIconButton {
   background-color: transparent;
@@ -148,12 +145,13 @@ $small-laptop-min: 1024px;
 }
 
 /* ==============================
-           Dropdown Button Style       
+           Dropdown Button Style
    ============================== */
+/* --- Normalizes div/link/button so centering is identical --- */
 .dropdownButton {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap removed: not needed and can cause odd wrapping */
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -161,6 +159,17 @@ $small-laptop-min: 1024px;
   text-align: center;
   text-decoration: none;
   text-shadow: 2px 2px 2px rgb(68, 68, 68);
+
+  /* UA reset for real <button> elements */
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  line-height: 1.2;
+  width: 100%; /* uniform width for all levels */
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     text-decoration: underline;
@@ -170,29 +179,25 @@ $small-laptop-min: 1024px;
     color: #1e90ff;
     font-size: $font-lg;
     margin: 0 auto;
-    padding: 0;
   }
-
   &.level-2 {
     color: $level-2;
     font-size: 1.4rem;
   }
-
   &.level-3 {
     color: $level-3;
     font-size: $font-md;
   }
-
   &.level-4 {
     color: $level-4;
     font-size: $font-sm;
   }
   &.level-5 {
     color: $level-5;
-    font-size: $font-xs;
-    width: 70%;
+    font-size: $font-xs; /* width: 100% via base */
   }
 
+  /* keep inner level wrappers centered if present */
   .level-1,
   .level-2,
   .level-3,
@@ -208,14 +213,10 @@ $small-laptop-min: 1024px;
   @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
     font-size: 1.3rem;
     padding: 0.5rem;
-  }
-
-  @media only screen and (max-width: $cellphone-portrait) and (orientation: portrait) {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
     margin-top: 0.3rem;
-    padding: 0 auto;
   }
 
   @media only screen and (min-width: $small-laptop-min) and (max-width: $small-laptop-max) {
@@ -223,9 +224,20 @@ $small-laptop-min: 1024px;
   }
 }
 
+/* Firefox inner padding quirk */
+.dropdownButton::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Every item should fill the column so text centers reliably */
+.dropdownItem {
+  width: 100%;
+}
+
 /* ==============================
-              Dropdown Layout          
-         ============================== */
+              Dropdown Layout
+   ============================== */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -240,12 +252,12 @@ $small-laptop-min: 1024px;
 }
 
 /* ==============================
-          Dropdown Menu Content        
-         ============================== */
+          Dropdown Menu Content
+   ============================== */
 .dropdownContent {
   position: absolute;
   top: 100%;
-  left: 55%;
+  left: 50%; /* center the panel */
   transform: translateX(-50%);
   background-color: $dropdown-bg;
   min-width: $dropdown-width;
@@ -259,6 +271,8 @@ $small-laptop-min: 1024px;
   &.active {
     display: grid;
     grid-template-columns: 1fr;
+    justify-items: stretch; /* children stretch to same width */
+    align-items: stretch;
     max-height: 31.2rem;
     overflow-y: auto;
     scrollbar-width: thin;
@@ -267,20 +281,16 @@ $small-laptop-min: 1024px;
     &::-webkit-scrollbar {
       width: 6px;
     }
-
     &::-webkit-scrollbar-thumb {
       background: $dropdown-hover;
       border-radius: 5px;
-
       &:hover {
         background: color.adjust($dropdown-hover, $lightness: 10%);
       }
     }
-
     &::-webkit-scrollbar-track {
       background: transparent;
     }
-
     &::-webkit-scrollbar-button {
       display: none;
     }
@@ -297,8 +307,8 @@ $small-laptop-min: 1024px;
 }
 
 /* ==============================
-        Active Nested Dropdown Menu  
-       ============================== */
+        Active Nested Dropdown Menu
+   ============================== */
 .dropdownMenu.active {
   display: flex;
   flex-direction: column;
