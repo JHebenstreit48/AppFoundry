@@ -1,4 +1,5 @@
 @use "sass:color";
+@use '@scss/Globals' as *;
 
 /* ==============================
             Variables
@@ -6,20 +7,14 @@
 $gradient-middle: #7a1f2a;   // crimson/rose
 $gradient-end:    #0c0607;   // obsidian
 
-$gradient-middle-p3: color(display-p3 0.09 0.59 0.66);
-$gradient-end-p3:    color(display-p3 0.02 0.06 0.08);
+// $gradient-middle-p3: color(display-p3 0.09 0.59 0.66);
+// $gradient-end-p3:    color(display-p3 0.02 0.06 0.08);
 
 $text-color: #ffffff;
 $text-glow:  #ffd166;
 
 $font-size-lg: 60px;
 $font-size-sm: 3rem;
-
-/* ==============================
-           Breakpoints
-============================== */
-$cellphone-portrait: 390px;
-$cellphone-landscape: 390px;
 
 /* ==============================
      Global Reset / Defaults
@@ -54,7 +49,7 @@ html, body {
     z-index: -1;
     pointer-events: none;
 
-    /* Desktop baseline */
+    /* Desktop baseline (sRGB only) */
     background: radial-gradient(
       circle at 50% 82%,   /* lower center = brown top band */
       $gradient-middle 20%,/* more amber vibrancy */
@@ -85,19 +80,6 @@ html, body {
         $gradient-middle 24%,
         $gradient-end 88%
       );
-    }
-  }
-
-  /* Wide-gamut enhancement */
-  @supports (color: color(display-p3 1 0 0)) {
-    @media (color-gamut: p3) {
-      &::before {
-        background: radial-gradient(
-          circle at 50% 78%,
-          $gradient-middle-p3 26%,
-          $gradient-end-p3 90%
-        );
-      }
     }
   }
 }
