@@ -6,10 +6,6 @@ import languagesNav from "@/Navigation/CombinedNav/CombinedNavTopics/languagesNa
 import resourcesNav from "@/Navigation/CombinedNav/CombinedNavTopics/resourcesNavCombined";
 
 const pages: Page[] = [
-  {
-    name: "Home",
-    subpages: [],
-  },
 frameworks,
 enginesNav,
 languagesNav,
