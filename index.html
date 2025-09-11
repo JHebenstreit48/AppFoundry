@@ -1,73 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/Favicon/AppFoundry-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/Favicon/AppFoundry-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="48x48"
-      href="/Favicon/AppFoundry-48x48.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="/Favicon/AppFoundry-96x96.png"
-    />
-
-    <!-- Apple Touch Icon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/Favicon/apple-touch-icon.png"
-    />
-
-    <!-- Android / PWA -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="/Favicon/AppFoundry-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="/Favicon/AppFoundry-512x512.png"
-    />
-
-    <!-- WebP fallback for supported browsers (optional) -->
-    <link
-      rel="icon"
-      type="image/webp"
-      href="/Favicon/AppFoundry.webp"
-    />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b0b21" />
     <title>AppFoundry</title>
+
+    <link rel="preload" as="image" href="/Favicon/AppFoundry.webp" type="image/webp" />
+
+    <link rel="icon" href="/Favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Favicon/AppFoundry-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png" />
   </head>
+
   <body>
     <div id="root"></div>
-    <script
-      type="module"
-      src="/src/main.tsx"
-    ></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
+  
 </html>
