@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/CombinedNav/Core/NavigationTypes';
+import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 
 const Components: Subpage = {
   name: 'Components',
