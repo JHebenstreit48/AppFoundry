@@ -1,8 +1,8 @@
 import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 
-const RNResourcesBasicsNavigation: Subpage = {
+const Basics: Subpage = {
   name: 'Basics',
   path: '/resources/frameworks/reactnative/basics'
 };
 
-export default RNResourcesBasicsNavigation;
+export default Basics;
