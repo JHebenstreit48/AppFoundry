@@ -1,6 +1,6 @@
 import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 
-const RNAdvancedNavigation: Subpage = {
+const Advanced: Subpage = {
   name: 'Advanced',
   subpages: [
     {
@@ -49,21 +49,8 @@ const RNAdvancedNavigation: Subpage = {
           path: '/reactnative/advanced/native/bridging'
         }
       ]
-    },
-    {
-      name: 'State',
-      subpages: [
-        {
-          name: 'Context API',
-          path: '/reactnative/advanced/state/context'
-        },
-        {
-          name: 'Redux',
-          path: '/reactnative/advanced/state/redux'
-        }
-      ]
     }
   ]
 };
 
-export default RNAdvancedNavigation;
+export default Advanced;
