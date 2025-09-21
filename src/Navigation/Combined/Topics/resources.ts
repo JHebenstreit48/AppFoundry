@@ -1,7 +1,7 @@
 import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 
 // ---------------------------------- React Native Resources Navigation Start ----------------------------------
-import Basics from '@/Navigation/Individual/Resources/Frameworks/ReactNative/Basics';
+import Basics from '@/Navigation/Individual/Granularized/Resources/Frameworks/ReactNative/Basics';
 // ----------------------------------- React Native Resources Navigation End ------------------------------------
 
 const resourcesNav: Subpage = {
