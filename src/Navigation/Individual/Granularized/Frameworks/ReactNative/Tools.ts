@@ -1,6 +1,6 @@
 import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 
-const RNToolsNavigation: Subpage = {
+const Tools: Subpage = {
   name: 'Tools',
   subpages: [
     {
@@ -109,4 +109,4 @@ const RNToolsNavigation: Subpage = {
   ]
 };
 
-export default RNToolsNavigation;
+export default Tools;
