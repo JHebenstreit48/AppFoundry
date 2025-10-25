@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "@/Components/Shared/Footer";
 import RouteTracker from "@/Components/Shared/analytics/RouteTracker";
-import BackToTopGate from "@/Components/Shared/BackToTopGate";
+import BackToTopGate from "@/Components/Shared/BackToTop/Gate";
 
 import "@/SCSS/PageStyles/Page.scss";
 import "@/SCSS/PageStyles/Header/Header.scss";
