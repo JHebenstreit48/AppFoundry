@@ -7,9 +7,9 @@ import EventHandle from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConc
 // Core Concepts - JSX and TSX, Event Handling, Props and State End
 
 // Core Concepts - Components - Start
-import RNComponentBasics from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/ComponentsPages/Basics';
-import RNComponentCore from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/ComponentsPages/Core';
-import RNComponentBuiltIn from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/ComponentsPages/BuiltIn';
+import RNComponentBasics from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Basics';
+import RNComponentCore from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Core';
+import RNComponentBuiltIn from '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/BuiltIn';
 // Core Concepts - Components - End
 
 // Core Concepts - Styling - Start
