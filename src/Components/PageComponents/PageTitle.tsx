@@ -1,4 +1,4 @@
-import '@/SCSS/PageStyles/PageTitle.scss';
+import '@/SCSS/Page/PageTitle.scss';
 
 const PageTitle = ({ title }: { title: string }) => {
   if (!title) return null;
