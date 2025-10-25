@@ -14,14 +14,57 @@ $font-size-lg: 60px;
 $font-size-sm: 3rem;
 
 /* ==============================
+        Gradient Mixin (sRGB-only)
+============================== */
+@mixin locked-gradient($mid, $end) {
+  background: radial-gradient(
+    ellipse 115% 100% at 50% 70%,
+    $mid 5%,
+    $end 80%
+  );
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+
+  @supports not (background: radial-gradient(ellipse at center, $end)) {
+    background: -webkit-radial-gradient(ellipse at 50% 70%, $mid 5%, $end 80%);
+    background: -moz-radial-gradient(ellipse at 50% 70%, $mid 5%, $end 80%);
+    background: -o-radial-gradient(ellipse at 50% 70%, $mid 5%, $end 80%);
+    background: -ms-radial-gradient(ellipse at 50% 70%, $mid 5%, $end 80%);
+  }
+
+  /* Phones (use your helper) */
+  @include maxw($cellphone-portrait) {
+    background: radial-gradient(
+      ellipse 120% 110% at 50% 72%,
+      $mid 6%,
+      $end 82%
+    );
+  }
+
+  /* Touch devices (kept as a capability query) */
+  @media (hover: none) and (pointer: coarse) {
+    background: radial-gradient(
+      ellipse 120% 110% at 50% 72%,
+      $mid 6%,
+      $end 82%
+    );
+  }
+}
+
+/* ==============================
      Global Reset / Defaults
 ============================== */
+
+html {
+  box-sizing: border-box;
+  scrollbar-gutter: stable both-edges;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
   background-color: #0d0d0d;
   overflow-x: hidden;
 }
@@ -32,51 +75,19 @@ html, body {
 .appContainer {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;    /* fallback */
-  min-height: 100dvh;   /* iOS-friendly */
+  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
-  isolation: isolate;   /* child glows can't stain the bg */
-  background: transparent; /* ⇐ gradient is drawn on ::before */
 
-  /* 🔒 LOCKED GRADIENT LAYER */
+  isolation: isolate;
+  background: transparent;
+
   &::before {
     content: "";
-    position: fixed;      /* covers viewport even on long pages */
-    inset: 0;
+    position: fixed;
+    inset: 0;               /* viewport fill without vw/vh drift */
     z-index: -1;
     pointer-events: none;
-
-    /* Desktop baseline (sRGB only) */
-    background: radial-gradient(
-      circle at 50% 82%,   /* lower center = brown top band */
-      $gradient-middle 20%,/* more amber vibrancy */
-      $gradient-end 88%    /* subtle brown edge */
-    );
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  /* Phones */
-  @media only screen and (max-width: $cellphone-portrait) {
-    &::before {
-      background: radial-gradient(
-        circle at 50% 78%,
-        $gradient-middle 26%, /* stronger amber */
-        $gradient-end 90%
-      );
-      background-size: cover;
-      background-position: center;
-    }
-  }
-
-  /* Touch devices */
-  @media (hover: none) and (pointer: coarse) {
-    &::before {
-      background: radial-gradient(
-        circle at 50% 78%,
-        $gradient-middle 24%,
-        $gradient-end 88%
-      );
-    }
+    @include locked-gradient($gradient-middle, $gradient-end);
   }
 }
