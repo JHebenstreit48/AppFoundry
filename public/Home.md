@@ -1,17 +1,12 @@
 <div class="siteInfoContent">
-  AppFoundry is a personal knowledge base for
-  <span class="emphasis">mobile app</span> and
-  <span class="emphasis">mobile game</span> development. It consolidates notes,
-  patterns, and workflows across native (iOS/Android) and cross-platform stacks
-  (React Native, Flutter, Unity), focusing on practical build/release pipelines,
-  store submission, testing, performance, and real-world developer ergonomics.
+  AppFoundry is a focused knowledge base for
+  <span class="emphasis">mobile app</span> and <span class="emphasis">mobile game</span> development. It consolidates notes, patterns, and workflows across native (iOS/Android) and cross-platform stacks (React Native, Flutter, Unity), focusing on practical build/release pipelines, store submission, testing, performance, and real-world developer ergonomics.
 </div>
 
 <hr />
 
 <div class="Note">
-  <strong>Note:</strong> A major refactor of navigation and routes is in progress —
-  more granular categories & subpages, consistent structure, and lazy-loaded routing.
+  <strong>Note:</strong> All sites are currently being refactored for consistent structure and lazy-loaded navigation.
 </div>
 
 <hr />
@@ -24,19 +19,19 @@
       <a href="https://devscriptstax.netlify.app/" target="_blank" rel="noopener noreferrer">
         DevScriptStax
       </a>
-      – Full-stack web dev notes
+      – Full stack web development notes
     </li>
     <li>
       <a href="https://netnotes.netlify.app/" target="_blank" rel="noopener noreferrer">
         NetNotes
       </a>
-      – Networking & Cisco notes
+      – Networking & Cisco technologies
     </li>
     <li>
       <a href="https://pixelprose.netlify.app/" target="_blank" rel="noopener noreferrer">
         PixelProse
       </a>
-      – General game development notes
+      – Non-mobile game development
     </li>
   </ul>
 </div>
