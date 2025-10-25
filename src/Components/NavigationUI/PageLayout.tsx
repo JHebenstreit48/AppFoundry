@@ -2,7 +2,7 @@
 import { ReactNode, useEffect, useMemo } from "react";
 import { useBreadcrumbTrail } from "@/Navigation/Combined/Core/useBreadCrumbTrail";
 import { SITE_NAME } from "@/Components/Shared/dynamicSiteName";
-import "@/SCSS/NavigationStyles/PageLayout.scss";
+import "@/SCSS/Navigation/PageLayout.scss";
 
 type PageLayoutProps = {
   children: ReactNode;
