@@ -2,14 +2,14 @@ import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNComponentBasics = () => {
+const ComponentBasics = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/ComponentsNotes/Basics';
+    'Frameworks/ReactNative/Basics/CoreConcepts/Components/Basics';
 
   return (
     <>
       <PageLayout>
-        <Header text="Basics" />
+        <Header />
         <Notes
           filePath={markdownFilePath}
         />
@@ -18,4 +18,4 @@ const RNComponentBasics = () => {
   );
 };
 
-export default RNComponentBasics;
+export default ComponentBasics;

@@ -16,11 +16,11 @@ const EventHandle = lazy(
 
 const JSXTSXEvent: RouteObject[] = [
   {
-    path: '/react-native/basics/core/jsx-and-tsx',
+    path: '/react-native/basics/core/jsx-tsx-event/jsx-and-tsx',
     element: <JSXAndTSX />
   },
   {
-    path: '/react-native/basics/core/props-and-state/event-handling',
+    path: '/react-native/basics/core/jsx-tsx-event/event-handling',
     element: <EventHandle />
   }
 ];

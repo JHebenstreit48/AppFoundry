@@ -4,12 +4,12 @@ import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const RNComponentCore = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/ComponentsNotes/Core';
+    'Frameworks/ReactNative/Basics/CoreConcepts/ComponentsNotes/Core';
 
   return (
     <>
       <PageLayout>
-        <Header text="Core" />
+        <Header />
         <Notes
           filePath={markdownFilePath}
         />

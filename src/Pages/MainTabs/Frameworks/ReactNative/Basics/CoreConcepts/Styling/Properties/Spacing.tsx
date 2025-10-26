@@ -1,15 +1,17 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNStyleSpacing = () => {
+const StylingSpacing = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/Styling/Properties/Spacing';
+    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Spacing';
 
   return (
     <>
       <PageLayout>
-        <Header text="Properties Spacing" />
+        <Header />
+        <PageTitle title="React Native - Styling Spacing" />
         <Notes
           filePath={markdownFilePath}
         />
@@ -18,4 +20,4 @@ const RNStyleSpacing = () => {
   );
 };
 
-export default RNStyleSpacing;
+export default StylingSpacing;

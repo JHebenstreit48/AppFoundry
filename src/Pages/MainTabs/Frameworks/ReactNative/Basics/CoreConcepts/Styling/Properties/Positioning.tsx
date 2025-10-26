@@ -2,9 +2,9 @@ import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNStylePositioning = () => {
+const StylingPositioning = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/Styling/Properties/Positioning';
+    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Positioning';
 
   return (
     <>
@@ -18,4 +18,4 @@ const RNStylePositioning = () => {
   );
 };
 
-export default RNStylePositioning;
+export default StylingPositioning;

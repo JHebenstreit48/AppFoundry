@@ -6,7 +6,7 @@ import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const EventHandle = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/PropsStateEvent/EventHandle';
+    'Frameworks/ReactNative/Basics/CoreConcepts/PropsStateEvent/EventHandle';
 
   return (
     <>
