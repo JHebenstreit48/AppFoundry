@@ -2,14 +2,14 @@ import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNComponentBuiltIn = () => {
+const ComponentBuiltIn = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/ComponentsNotes/BuiltIn';
+    'Frameworks/ReactNative/Basics/CoreConcepts/ComponentsNotes/BuiltIn';
 
   return (
     <>
       <PageLayout>
-        <Header text="Built-In" />
+        <Header />
         <Notes
           filePath={markdownFilePath}
         />
@@ -18,4 +18,4 @@ const RNComponentBuiltIn = () => {
   );
 };
 
-export default RNComponentBuiltIn;
+export default ComponentBuiltIn;

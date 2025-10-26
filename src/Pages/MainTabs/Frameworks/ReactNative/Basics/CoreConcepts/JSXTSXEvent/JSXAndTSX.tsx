@@ -4,17 +4,14 @@ import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const JSXTSX = () => {
-  const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/JSXAndTSX';
+  const markdownFilePath = 'Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent/JSXAndTSX';
 
   return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="JSX & TSX in React Native" />
-        <Notes
-          filePath={markdownFilePath}
-        />
+        <PageTitle title=" React Native Core Concepts - JSX & TSX" />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );

@@ -1,15 +1,17 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNStyleLayout = () => {
+const StylingLayout = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/Styling/Layout';
+    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Layout';
 
   return (
     <>
       <PageLayout>
-        <Header text="Layout" />
+        <Header />
+        <PageTitle title="React Native - Styling Layout" />
         <Notes
           filePath={markdownFilePath}
         />
@@ -18,4 +20,4 @@ const RNStyleLayout = () => {
   );
 };
 
-export default RNStyleLayout;
+export default StylingLayout;

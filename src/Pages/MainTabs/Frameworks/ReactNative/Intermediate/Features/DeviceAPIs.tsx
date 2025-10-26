@@ -5,13 +5,13 @@ import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const RNDeviceAPIs = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Intermediate/Features/DeviceAPIs';
+    'Frameworks/ReactNative/Intermediate/Features/DeviceAPIs';
 
   return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="React Native Device APIs" />
+        <PageTitle title="React Native Features - Device APIs" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>

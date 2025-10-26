@@ -4,12 +4,12 @@ import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const RNProps = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/PropsStateEvent/Props';
+    'Frameworks/ReactNative/Basics/CoreConcepts/PropsStateEvent/Props';
 
   return (
     <>
       <PageLayout>
-        <Header text="Props" />
+        <Header />
         <Notes
           filePath={markdownFilePath}
         />

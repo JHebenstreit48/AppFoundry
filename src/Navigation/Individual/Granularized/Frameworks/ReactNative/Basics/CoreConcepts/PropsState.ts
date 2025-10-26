@@ -16,11 +16,11 @@ const PropsState: Subpage = {
       subpages: [
         {
           name: 'Fetch & Axios',
-          path: '/react-native/intermediate/state/fetch-and-axios',
+          path: '/react-native/basics/core/props-and-state/async-and-api/fetch-and-axios',
         },
         {
           name: 'Managing API State',
-          path: '/react-native/intermediate/state/api-state',
+          path: '/react-native/basics/core/props-and-state/async-and-api/managing-api-state',
         },
       ],
     },
@@ -29,11 +29,11 @@ const PropsState: Subpage = {
       subpages: [
         {
           name: 'Context API',
-          path: '/react-native/advanced/state/context',
+          path: '/react-native/basics/core/props-and-state/context/context-api',
         },
         {
           name: 'Providers & Performance',
-          path: '/react-native/advanced/state/context/providers-and-performance',
+          path: '/react-native/basics/core/props-and-state/context/providers-and-performance',
         },
       ],
     },

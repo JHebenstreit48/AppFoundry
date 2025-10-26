@@ -4,12 +4,13 @@ import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const RNStylingBasics = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/Styling/Basics';
+    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Basics';
 
   return (
     <>
       <PageLayout>
-        <Header text="Styling Basics" />
+        <Header />
+        
         <Notes
           filePath={markdownFilePath}
         />

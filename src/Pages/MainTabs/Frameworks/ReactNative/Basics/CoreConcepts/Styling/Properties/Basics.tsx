@@ -4,7 +4,7 @@ import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const RNStylePropsBasics = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/CoreConcepts/Styling/Properties/Basics';
+    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Basics';
 
   return (
     <>

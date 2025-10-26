@@ -1,11 +1,13 @@
 import { RouteObject } from "react-router-dom";
 
 import Fundamentals from '@/routes/Individual/Granularized/Framework/ReactNative/Basics/Fundamentals';
-import JSXTSXEvent from "@/routes/Individual/Granularized/Framework/ReactNative/Basics/JSXTSXEvent";
+import CoreConcepts from '@/routes/Individual/Granularized/Framework/ReactNative/Basics/CoreConcepts';
+import Navigation from '@/routes/Individual/Granularized/Framework/ReactNative/Basics/Navigation';
 
 const Basics: RouteObject[] = [
     ...Fundamentals,
-    ...JSXTSXEvent,
+    ...CoreConcepts,
+    ...Navigation
 ];
 
 export default Basics;
