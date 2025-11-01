@@ -8,11 +8,11 @@ const Advanced: Subpage = {
       subpages: [
         {
           name: 'Certificates & Provisioning Profiles',
-          path: '/tools/xcode/advanced/signing/certs-profiles'
+          path: '/xcode/advanced/signing-and-distribute/certs-and-provisioning'
         },
         {
           name: 'Schemes & Build Settings',
-          path: '/tools/xcode/advanced/signing/schemes-build'
+          path: '/xcode/advanced/signing-and-distribute/schemes-and-build'
         },
       ],
     },
@@ -21,11 +21,11 @@ const Advanced: Subpage = {
       subpages: [
         {
           name: 'Device Logs & Crash Reports',
-          path: '/tools/xcode/advanced/diagnostics/device-logs-crashes'
+          path: '/xcode/advanced/diagnostics/device-logs-and-crashes'
         },
         {
           name: 'Instruments Profiling',
-          path: '/tools/xcode/advanced/diagnostics/instruments'
+          path: '/xcode/advanced/diagnostics/instruments'
         },
       ],
     },

@@ -8,15 +8,15 @@ const Basics: Subpage = {
       subpages: [
         {
           name: 'IDE Overview',
-          path: '/tools/android-studio/basics/ide-overview'
+          path: '/android-studio/basics/fundamentals/ide-overview'
         },
         {
           name: 'Installation & SDK Manager',
-          path: '/tools/android-studio/basics/installation-sdk'
+          path: '/android-studio/basics/fundamentals/installation-sdk'
         },
         {
           name: 'Project Structure & Gradle Basics',
-          path: '/tools/android-studio/basics/project-structure'
+          path: '/android-studio/basics/fundamentals/project-structure'
         }
       ]
     },
@@ -25,11 +25,11 @@ const Basics: Subpage = {
       subpages: [
         {
           name: 'AVD Manager',
-          path: '/tools/android-studio/basics/avd-manager'
+          path: '/android-studio/basics/emulators/avd-manager'
         },
         {
           name: 'Emulator Essentials',
-          path: '/tools/android-studio/basics/emulator-essentials'
+          path: '/android-studio/basics/emulators/emulator-essentials'
         }
       ]
     }

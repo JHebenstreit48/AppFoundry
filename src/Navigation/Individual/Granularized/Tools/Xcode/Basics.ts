@@ -8,11 +8,11 @@ const Basics: Subpage = {
       subpages: [
         {
           name: 'Installation & Command Line Tools',
-          path: '/tools/xcode/basics/installation-clt'
+          path: '/xcode/basics/fundamentals/installation-and-clt'
         },
         {
           name: 'First Run & Updates',
-          path: '/tools/xcode/basics/first-run-updates'
+          path: '/xcode/basics/fundamentals/first-run-updates'
         }
       ]
     },
@@ -21,11 +21,11 @@ const Basics: Subpage = {
       subpages: [
         {
           name: 'Manage Runtimes & Devices',
-          path: '/tools/xcode/basics/simulators/manage-runtimes'
+          path: '/xcode/basics/simulators/manage-runtimes'
         },
         {
           name: 'Custom Simulators & Resets',
-          path: '/tools/xcode/basics/simulators/custom-and-reset'
+          path: '/xcode/basics/simulators/custom-and-reset'
         }
       ]
     }
