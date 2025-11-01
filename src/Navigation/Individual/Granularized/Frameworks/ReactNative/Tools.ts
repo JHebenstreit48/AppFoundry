@@ -20,93 +20,85 @@ const Tools: Subpage = {
             {
               name: 'Ejecting',
               path: '/react-native/tools/expo/cli/eject'
-            }
-          ]
+            },
+          ],
         },
         {
           name: 'Expo Go',
           subpages: [
             {
               name: 'Installing/Running',
-              path: '/reactnative/tools/expo/go/install'
+              path: '/react-native/tools/expo/go/install'
             },
             {
               name: 'Previewing',
-              path: '/reactnative/tools/expo/go/preview'
+              path: '/react-native/tools/expo/go/preview'
             },
             {
               name: 'QR Codes/Testing',
-              path: '/reactnative/tools/expo/go/qr'
-            }
-          ]
-        }
-      ]
+              path: '/react-native/tools/expo/go/qr'
+            },
+          ],
+        },
+      ],
     },
     {
       name: 'React Native CLI',
       subpages: [
         {
           name: 'Overview',
-          path: '/reactnative/tools/rncli/overview'
+          path: '/react-native/tools/rn-cli/overview'
         },
         {
           name: 'Setup',
-          path: '/reactnative/tools/rncli/setup'
+          path: '/react-native/tools/rn-cli/setup'
         },
         {
           name: 'Running Apps',
-          path: '/reactnative/tools/rncli/running'
-        }
-      ]
+          path: '/react-native/tools/rn-cli/running'
+        },
+      ],
     },
     {
       name: 'Metro Bundler',
       subpages: [
         {
           name: 'Overview',
-          path: '/reactnative/tools/metro/overview'
+          path: '/react-native/tools/metro/overview'
         },
         {
           name: 'Manual Access/Commands',
-          path: '/reactnative/tools/metro/usage'
-        }
-      ]
+          path: '/react-native/tools/metro/usage'
+        },
+      ],
     },
     {
-      name: 'Android Studio',
+      name: 'Android Studio (RN)',
       subpages: [
         {
-          name: 'Installation/SDK',
-          path: '/reactnative/tools/androidstudio/installation'
+          name: 'AVDs for RN',
+          path: '/reactnative/tools/android-studio/avds-for-rn'
         },
         {
-          name: 'Virtual Devices (AVDs)',
-          path: '/reactnative/tools/androidstudio/avds'
+          name: 'Build/SDK Setup (RN)',
+          path: '/reactnative/tools/android-studio/sdk-setup-rn'
         },
-        {
-          name: 'Running Apps',
-          path: '/reactnative/tools/androidstudio/running'
-        }
-      ]
+      ],
     },
     {
-      name: 'Xcode',
+      name: 'Xcode (RN)',
       subpages: [
         {
-          name: 'Installation/CLI',
-          path: '/reactnative/tools/xcode/installation'
+          name: 'iOS Simulator for RN',
+          path: '/reactnative/tools/xcode/simulator-for-rn'
         },
         {
-          name: 'Simulators',
-          path: '/reactnative/tools/xcode/simulators'
+          name: 'Signing & Run (RN)',
+          path: '/reactnative/tools/xcode/signing-run-rn'
         },
-        {
-          name: 'Running Apps',
-          path: '/reactnative/tools/xcode/running'
-        }
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 };
 
 export default Tools;
