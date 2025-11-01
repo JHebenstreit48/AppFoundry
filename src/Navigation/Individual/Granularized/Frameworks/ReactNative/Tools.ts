@@ -11,15 +11,15 @@ const Tools: Subpage = {
           subpages: [
             {
               name: 'Overview',
-              path: '/reactnative/tools/expo/cli/overview'
+              path: '/react-native/tools/expo/cli/overview'
             },
             {
               name: 'Workflow',
-              path: '/reactnative/tools/expo/cli/workflow'
+              path: '/react-native/tools/expo/cli/workflow'
             },
             {
               name: 'Ejecting',
-              path: '/reactnative/tools/expo/cli/eject'
+              path: '/react-native/tools/expo/cli/eject'
             }
           ]
         },
