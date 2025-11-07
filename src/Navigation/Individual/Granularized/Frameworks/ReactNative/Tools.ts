@@ -77,11 +77,11 @@ const Tools: Subpage = {
       subpages: [
         {
           name: 'AVDs for RN',
-          path: '/reactnative/tools/android-studio/avds-for-rn'
+          path: '/react-native/tools/android-studio/avds'
         },
         {
           name: 'Build/SDK Setup (RN)',
-          path: '/reactnative/tools/android-studio/sdk-setup-rn'
+          path: '/react-native/tools/android-studio/build-and-sdk-setup'
         },
       ],
     },
@@ -89,12 +89,12 @@ const Tools: Subpage = {
       name: 'Xcode (RN)',
       subpages: [
         {
-          name: 'iOS Simulator for RN',
-          path: '/reactnative/tools/xcode/simulator-for-rn'
+          name: 'iOS Simulators (RN)',
+          path: '/react-native/tools/xcode/ios-simulators'
         },
         {
           name: 'Signing & Run (RN)',
-          path: '/reactnative/tools/xcode/signing-run-rn'
+          path: '/react-native/tools/xcode/signing-and-run'
         },
       ],
     },
