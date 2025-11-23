@@ -5,11 +5,11 @@ const JSXTSXEvent: Subpage = {
   subpages: [
     {
       name: 'JSX & TSX',
-      path: '/react-native/basics/core/jsx-and-tsx'
+      path: '/react-native/basics/core/jsx-tsx-event/jsx-and-tsx'
     },
     {
       name: 'Event Handling',
-      path: '/react-native/basics/core/props-and-state/event-handling'
+      path: '/react-native/basics/core/jsx-tsx-event/event-handling'
     }
   ]
 };

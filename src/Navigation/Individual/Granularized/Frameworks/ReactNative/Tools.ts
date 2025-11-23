@@ -11,102 +11,94 @@ const Tools: Subpage = {
           subpages: [
             {
               name: 'Overview',
-              path: '/reactnative/tools/expo/cli/overview'
+              path: '/react-native/tools/expo/cli/overview'
             },
             {
               name: 'Workflow',
-              path: '/reactnative/tools/expo/cli/workflow'
+              path: '/react-native/tools/expo/cli/workflow'
             },
             {
               name: 'Ejecting',
-              path: '/reactnative/tools/expo/cli/eject'
-            }
-          ]
+              path: '/react-native/tools/expo/cli/eject'
+            },
+          ],
         },
         {
           name: 'Expo Go',
           subpages: [
             {
               name: 'Installing/Running',
-              path: '/reactnative/tools/expo/go/install'
+              path: '/react-native/tools/expo/go/install'
             },
             {
               name: 'Previewing',
-              path: '/reactnative/tools/expo/go/preview'
+              path: '/react-native/tools/expo/go/preview'
             },
             {
               name: 'QR Codes/Testing',
-              path: '/reactnative/tools/expo/go/qr'
-            }
-          ]
-        }
-      ]
+              path: '/react-native/tools/expo/go/qr'
+            },
+          ],
+        },
+      ],
     },
     {
       name: 'React Native CLI',
       subpages: [
         {
           name: 'Overview',
-          path: '/reactnative/tools/rncli/overview'
+          path: '/react-native/tools/rn-cli/overview'
         },
         {
           name: 'Setup',
-          path: '/reactnative/tools/rncli/setup'
+          path: '/react-native/tools/rn-cli/setup'
         },
         {
           name: 'Running Apps',
-          path: '/reactnative/tools/rncli/running'
-        }
-      ]
+          path: '/react-native/tools/rn-cli/running'
+        },
+      ],
     },
     {
       name: 'Metro Bundler',
       subpages: [
         {
           name: 'Overview',
-          path: '/reactnative/tools/metro/overview'
+          path: '/react-native/tools/metro/overview'
         },
         {
           name: 'Manual Access/Commands',
-          path: '/reactnative/tools/metro/usage'
-        }
-      ]
+          path: '/react-native/tools/metro/usage'
+        },
+      ],
     },
     {
-      name: 'Android Studio',
+      name: 'Android Studio (RN)',
       subpages: [
         {
-          name: 'Installation/SDK',
-          path: '/reactnative/tools/androidstudio/installation'
+          name: 'AVDs for RN',
+          path: '/react-native/tools/android-studio/avds'
         },
         {
-          name: 'Virtual Devices (AVDs)',
-          path: '/reactnative/tools/androidstudio/avds'
+          name: 'Build/SDK Setup (RN)',
+          path: '/react-native/tools/android-studio/build-and-sdk-setup'
         },
-        {
-          name: 'Running Apps',
-          path: '/reactnative/tools/androidstudio/running'
-        }
-      ]
+      ],
     },
     {
-      name: 'Xcode',
+      name: 'Xcode (RN)',
       subpages: [
         {
-          name: 'Installation/CLI',
-          path: '/reactnative/tools/xcode/installation'
+          name: 'iOS Simulators (RN)',
+          path: '/react-native/tools/xcode/ios-simulators'
         },
         {
-          name: 'Simulators',
-          path: '/reactnative/tools/xcode/simulators'
+          name: 'Signing & Run (RN)',
+          path: '/react-native/tools/xcode/signing-and-run'
         },
-        {
-          name: 'Running Apps',
-          path: '/reactnative/tools/xcode/running'
-        }
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 };
 
 export default Tools;

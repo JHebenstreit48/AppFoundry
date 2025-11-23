@@ -4,49 +4,49 @@ const PropsState: Subpage = {
   name: 'Props & State',
   subpages: [
     {
-      name: 'Props',
-      path: '/react-native/basics/core/props-and-state/props',
-    },
-    {
-      name: 'State',
-      path: '/react-native/basics/core/props-and-state/state',
+      name: 'Fundamentals',
+      subpages: [
+        {
+          name: 'Props',
+          path: '/react-native/basics/core/props-and-state/fundamentals/props',
+        },
+        {
+          name: 'State',
+          path: '/react-native/basics/core/props-and-state/fundamentals/state',
+        },
+      ],
     },
     {
       name: 'Async/API State',
       subpages: [
         {
           name: 'Fetch & Axios',
-          path: '/react-native/intermediate/state/fetch-and-axios',
+          path: '/react-native/basics/core/props-and-state/async-and-api/fetch-and-axios',
         },
         {
           name: 'Managing API State',
-          path: '/react-native/intermediate/state/api-state',
+          path: '/react-native/basics/core/props-and-state/async-and-api/managing-api-state',
         },
       ],
     },
     {
-      name: 'Context',
+      name: 'Global State (Context & Redux)',
       subpages: [
         {
           name: 'Context API',
-          path: '/react-native/advanced/state/context',
+          path: '/react-native/basics/core/props-and-state/global/context-api',
         },
         {
           name: 'Providers & Performance',
-          path: '/react-native/advanced/state/context/providers-and-performance',
+          path: '/react-native/basics/core/props-and-state/global/providers-and-performance',
         },
-      ],
-    },
-    {
-      name: 'Redux (React Native)',
-      subpages: [
         {
           name: 'RTK & RTK Query (RN)',
-          path: '/react-native/basics/core/props-and-state/redux-react-native/rtk-and-rtk-query',
+          path: '/react-native/basics/core/props-and-state/global/rtk-and-rtk-query',
         },
         {
           name: 'Persist & Offline (RN)',
-          path: '/react-native/basics/core/props-and-state/redux-react-native/persist-and-offline',
+          path: '/react-native/basics/core/props-and-state/global/persist-and-offline',
         },
       ],
     },

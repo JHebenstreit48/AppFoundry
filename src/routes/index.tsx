@@ -3,11 +3,12 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from '@/App';
 import ErrorPage from '@/Pages/Special/Error';
 import Home from '@/Pages/Special/Home';
+import About from '@/Pages/Special/About';
 
-import frameworks from '@/routes/FullSections/frameworks';
-import enginesRoutes from '@/routes/FullSections/engines';
-import languagesRoutes from '@/routes/FullSections/languages';
-import resourcesRoutes from '@/routes/FullSections/resources';
+import frameworks from '@/routes/Sections/frameworks';
+import engines from '@/routes/Sections/engines';
+import languages from '@/routes/Sections/languages';
+import resources from '@/routes/Sections/resources';
 
 export const router = createBrowserRouter([
   {
@@ -19,10 +20,11 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home />
       },
+      { path: 'about', element: <About /> },
       ...frameworks,
-      ...enginesRoutes,
-      ...languagesRoutes,
-      ...resourcesRoutes
+      ...engines,
+      ...languages,
+      ...resources
     ]
   }
 ]);

@@ -1,27 +1,30 @@
-// src/App.tsx
-import { Outlet } from "react-router-dom";
 import { Suspense } from "react";
-
-// Components
+import { Outlet } from "react-router-dom";
 import Footer from "@/Components/Shared/Footer";
+import RouteTracker from "@/Components/Shared/analytics/RouteTracker";
+import BackToTopGate from "@/Components/Shared/BackToTop/Gate";
+// import WakeGate from "@/Components/Shared/WakeGate";
 
-// Styles (unchanged except EntryScreen.scss removed)
-import "@/SCSS/PageStyles/Page.scss";
-import "@/SCSS/PageStyles/Header/Header.scss";
-import "@/SCSS/PageStyles/Footer.scss";
-import "@/SCSS/NavigationStyles/Navigation.scss";
-import "@/SCSS/NavigationStyles/SearchModal.scss";
-import "@/SCSS/PageStyles/Error.scss";
+import "@/SCSS/Page/Page.scss";
+import "@/SCSS/Page/Header/Header.scss";
+import "@/SCSS/Page/Footer.scss";
+import "@/SCSS/Navigation/Navigation.scss";
+import "@/SCSS/Navigation/SearchModal.scss";
+import "@/SCSS/Page/Error.scss";
 
 export default function App() {
   return (
     <div className="appContainer">
+      <RouteTracker />
+      {/* <WakeGate /> pre-wakes backend in the background */}
+      <BackToTopGate />
+
       <div className="contentWrapper">
-        {/* Keep a route-level Suspense so lazy routes don't complain */}
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
       </div>
+
       <Footer />
     </div>
   );

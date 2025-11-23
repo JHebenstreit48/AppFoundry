@@ -5,13 +5,13 @@ import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const Structure = () => {
   const markdownFilePath =
-    'FrameworksNotes/ReactNativeNotes/Basics/Fundamentals/Structure';
+    'Frameworks/ReactNative/Basics/Fundamentals/Structure';
 
   return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="React Native Project Structure" />
+        <PageTitle title="React Native Fundamentals - Project Structure" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
