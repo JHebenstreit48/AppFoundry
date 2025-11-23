@@ -1,21 +1,20 @@
 import PageLayout from '@/Components/NavigationUI/PageLayout';
 import Header from '@/Components/Shared/Header/Header';
+import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const RNStylePropsBasics = () => {
-  const markdownFilePath =
-    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Basics';
+const Basics = () => {
+  const markdownFilePath = 'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Basics';
 
   return (
     <>
       <PageLayout>
-        <Header text="Properties Basics" />
-        <Notes
-          filePath={markdownFilePath}
-        />
+        <Header />
+        <PageTitle title="React Native Basics - Styling Properties" />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
 };
 
-export default RNStylePropsBasics;
+export default Basics;

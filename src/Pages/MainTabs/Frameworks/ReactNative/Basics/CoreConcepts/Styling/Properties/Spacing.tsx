@@ -3,21 +3,18 @@ import Header from '@/Components/Shared/Header/Header';
 import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const StylingSpacing = () => {
-  const markdownFilePath =
-    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Spacing';
+const Spacing = () => {
+  const markdownFilePath = 'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Spacing';
 
   return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="React Native - Styling Spacing" />
-        <Notes
-          filePath={markdownFilePath}
-        />
+        <PageTitle title="React Native Basics - Spacing" />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
 };
 
-export default StylingSpacing;
+export default Spacing;

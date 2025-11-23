@@ -3,18 +3,18 @@ import Header from '@/Components/Shared/Header/Header';
 import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const DeviceAPIs = () => {
-  const markdownFilePath = 'Frameworks/ReactNative/Intermediate/Features/DeviceAPIs';
+const Permissions = () => {
+  const markdownFilePath = 'Frameworks/ReactNative/Intermediate/Features/Permissions';
 
   return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="React Native Intermediate - Device APIs" />
+        <PageTitle title="React Native Intermediate - Permissions" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
 };
 
-export default DeviceAPIs;
+export default Permissions;
