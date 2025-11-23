@@ -3,21 +3,18 @@ import Header from '@/Components/Shared/Header/Header';
 import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const StylingLayout = () => {
-  const markdownFilePath =
-    'Frameworks/ReactNative/Basics/CoreConcepts/Styling/Layout';
+const DeepLinking = () => {
+  const markdownFilePath = 'Frameworks/ReactNative/Intermediate/Navigation/DeepLinking';
 
   return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="React Native - Styling Layout" />
-        <Notes
-          filePath={markdownFilePath}
-        />
+        <PageTitle title="React Native Intermediate - Deep Linking" />
+        <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
 };
 
-export default StylingLayout;
+export default DeepLinking;

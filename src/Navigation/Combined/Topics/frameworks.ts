@@ -1,11 +1,20 @@
 import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 
+import Flutter from '@/Navigation/Individual/Topics/Frameworks/Flutter';
+import JetpackCompose from '@/Navigation/Individual/Topics/Frameworks/JetpackCompose';
 import ReactNative from '@/Navigation/Individual/Topics/Frameworks/ReactNative';
+import SwiftUI from '@/Navigation/Individual/Topics/Frameworks/SwiftUI';
+import Xamarin from '@/Navigation/Individual/Topics/Frameworks/Xamarin';
 
 const frameworks: Subpage = {
   name: 'Frameworks',
   subpages: [
-    ReactNative
+    Flutter,
+    JetpackCompose,
+    ReactNative,
+    SwiftUI,
+    Xamarin
+    
   ]
 };
 
