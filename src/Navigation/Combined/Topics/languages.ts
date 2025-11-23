@@ -3,7 +3,7 @@ import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 // ---------------------------------- React Native Navigation Start ----------------------------------
 // ----------------------------------- React Native Navigation End ------------------------------------
 
-const languagesNav: Subpage = {
+const languages: Subpage = {
   name: 'Languages',
   subpages: [
     {
@@ -14,4 +14,4 @@ const languagesNav: Subpage = {
   ]
 };
 
-export default languagesNav;
+export default languages;
