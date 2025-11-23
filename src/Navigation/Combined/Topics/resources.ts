@@ -4,7 +4,7 @@ import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 import Basics from '@/Navigation/Individual/Granularized/Resources/Frameworks/ReactNative/Basics';
 // ----------------------------------- React Native Resources Navigation End ------------------------------------
 
-const resourcesNav: Subpage = {
+const resources: Subpage = {
   name: 'Resources',
   subpages: [
     {
@@ -25,4 +25,4 @@ const resourcesNav: Subpage = {
   ]
 };
 
-export default resourcesNav;
+export default resources;

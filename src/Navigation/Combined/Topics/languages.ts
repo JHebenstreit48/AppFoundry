@@ -1,7 +1,6 @@
 import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
 
 
-
 const languages: Subpage = {
   name: 'Languages',
   subpages: [
