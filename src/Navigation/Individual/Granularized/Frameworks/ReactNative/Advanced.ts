@@ -8,15 +8,15 @@ const Advanced: Subpage = {
       subpages: [
         {
           name: 'Debugging & Testing',
-          path: '/reactnative/advanced/build/debugging'
+          path: '/react-native/advanced/build/debugging'
         },
         {
           name: 'CI/CD Pipelines',
-          path: '/reactnative/advanced/build/cicd'
+          path: '/react-native/advanced/build/cicd'
         },
         {
           name: 'Environment Variables',
-          path: '/reactnative/advanced/build/env'
+          path: '/react-native/advanced/build/env'
         }
       ]
     },
@@ -25,15 +25,15 @@ const Advanced: Subpage = {
       subpages: [
         {
           name: 'Handling Large Lists',
-          path: '/reactnative/advanced/performance/lists'
+          path: '/react-native/advanced/performance/lists'
         },
         {
           name: 'Animations & Gestures',
-          path: '/reactnative/advanced/performance/animations'
+          path: '/react-native/advanced/performance/animations'
         },
         {
           name: 'Memory Optimization',
-          path: '/reactnative/advanced/performance/memory'
+          path: '/react-native/advanced/performance/memory'
         }
       ]
     },
@@ -42,11 +42,11 @@ const Advanced: Subpage = {
       subpages: [
         {
           name: 'Custom Code',
-          path: '/reactnative/advanced/native/customcode'
+          path: '/react-native/advanced/native/custom-code'
         },
         {
           name: 'Bridging',
-          path: '/reactnative/advanced/native/bridging'
+          path: '/react-native/advanced/native/bridging'
         }
       ]
     }
