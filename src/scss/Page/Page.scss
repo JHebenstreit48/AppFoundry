@@ -4,11 +4,11 @@
 /* ==============================
             Variables
 ============================== */
-$gradient-middle: #250069;   // purple center
-$gradient-end:    #0f002b;   // deep edge
+$gradient-middle: #7a1f2a;   // crimson/rose
+$gradient-end:    #0c0607;   // obsidian
 
 $text-color: #ffffff;
-$text-glow:  #00ffff;
+$text-glow:  #ffd166;
 
 $font-size-lg: 60px;
 $font-size-sm: 3rem;
@@ -55,6 +55,7 @@ $font-size-sm: 3rem;
 /* ==============================
      Global Reset / Defaults
 ============================== */
+
 html {
   box-sizing: border-box;
   scrollbar-gutter: stable both-edges;
