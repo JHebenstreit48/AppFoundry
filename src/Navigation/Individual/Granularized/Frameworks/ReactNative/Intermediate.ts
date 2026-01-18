@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
+import type { Subpage } from '@/types/navigation';
 
 import Navigation from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Intermediate/Navigation';
 import Forms from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Intermediate/Forms';

@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
+import type { Subpage } from '@/types/navigation';
 
 import Flutter from '@/Navigation/Individual/Topics/Frameworks/Flutter';
 import JetpackCompose from '@/Navigation/Individual/Topics/Frameworks/JetpackCompose';

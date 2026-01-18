@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
+import type { Subpage } from '@/types/navigation';
 
 // ---------------------------------- React Native Resources Navigation Start ----------------------------------
 import Basics from '@/Navigation/Individual/Granularized/Resources/Frameworks/ReactNative/Basics';

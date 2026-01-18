@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
+import type { Subpage } from '@/types/navigation';
 
 const JSXTSXEvent: Subpage = {
   name: 'JSX/TSX & Event Handling',

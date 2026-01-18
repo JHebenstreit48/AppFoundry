@@ -1,40 +1,26 @@
-// src/Components/NavigationUI/PageLayout.tsx
-import { ReactNode, useEffect, useMemo } from "react";
-import { useBreadcrumbTrail } from "@/Navigation/Combined/Core/useBreadCrumbTrail";
-import { SITE_NAME } from "@/Components/Shared/dynamicSiteName";
-import "@/SCSS/Navigation/PageLayout.scss";
+import { ReactNode } from 'react';
+import { useBreadcrumbTrail } from '@/hooks/navigation/useBreadcrumbTrail';
+import '@/scss/Navigation/index.scss';
 
 type PageLayoutProps = {
   children: ReactNode;
-  /** Optional full override, e.g. "AppFoundry | About" */
-  shortTitle?: string;
+  shortTitle?: string; // Optional override for <title>
 };
 
 const PageLayout = ({ children, shortTitle }: PageLayoutProps) => {
-  const rawCrumbs = useBreadcrumbTrail();
+  const breadcrumb = useBreadcrumbTrail();
 
-  // Trim & filter: remove blanks and whitespace-only crumbs
-  const breadcrumb = useMemo(
-    () =>
-      (rawCrumbs ?? [])
-        .map((c) => (typeof c === "string" ? c.trim() : c))
-        .filter((c) => typeof c === "string" && c.length > 0),
-    [rawCrumbs]
+  const title =
+    shortTitle || (breadcrumb.length > 0 ? breadcrumb.join(' > ') : 'Untitled Page');
+
+  // ✅ Keep this — it sets the browser tab title
+  document.title = title;
+
+  return (
+    <div className="PageLayout">
+      {children}
+    </div>
   );
-
-  const joined = useMemo(() => breadcrumb.join(" > ").trim(), [breadcrumb]);
-
-  const computedTitle = useMemo(() => {
-    if (shortTitle && shortTitle.trim()) return shortTitle.trim();
-    if (joined) return joined;                // notes pages (unchanged behavior)
-    return `${SITE_NAME} | Home`;             // homepage or truly empty crumbs
-  }, [shortTitle, joined]);
-
-  useEffect(() => {
-    document.title = computedTitle;           // always set to a non-empty value
-  }, [computedTitle]);
-
-  return <div className="PageLayout">{children}</div>;
 };
 
 export default PageLayout;
