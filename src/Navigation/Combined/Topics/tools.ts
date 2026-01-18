@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
+import type { Subpage } from '@/types/navigation';
 
 import AndroidStudio from '@/Navigation/Individual/Topics/Tools/AndroidStudio';
 import Xcode from '@/Navigation/Individual/Topics/Tools/Xcode';

@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
+import type { Subpage } from '@/types/navigation';
 
 import Kotlin from '@/Navigation/Individual/Topics/Languages/Kotlin';
 import Dart from '@/Navigation/Individual/Topics/Languages/Dart';

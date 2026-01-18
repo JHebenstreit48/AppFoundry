@@ -1,4 +1,4 @@
-import { Subpage } from '@/Navigation/Combined/Core/NavigationTypes';
+import type { Subpage } from '@/types/navigation';
 
 import Components from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Basics/CoreConcepts/Components';
 import JSXTSXEvent from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent';
