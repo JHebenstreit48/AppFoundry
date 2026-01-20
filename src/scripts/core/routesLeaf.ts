@@ -79,7 +79,7 @@ function matchesFilter(filter: Filter, sectionName: string, topicName: string) {
 }
 
 export function generateLeafLazyRoutes(pagesRoot: Subpage[], filter: Filter): Result {
-  const out: Result = { wrote: [], skipped: [], wouldWrite: [] };
+  const out: Result = { "wrote": [], "skipped": [], "wouldWrite": [] };
   const limit = filter.limit ?? config.defaultLimit;
   let createdCount = 0;
 
