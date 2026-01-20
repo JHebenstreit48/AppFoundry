@@ -13,7 +13,7 @@ export function flattenNav(pages: Subpage[]): NavLeaf[] {
       const next = [...parent, n.name];
 
       if (n.path) {
-        out.push({ urlPath: n.path, crumbs: next });
+        out.push({ "urlPath": n.path, "crumbs": next });
         continue;
       }
 
