@@ -1,18 +1,22 @@
+import { lazy, Suspense } from "react";
 import Header from "@/Components/Shared/Header/Header";
-import NotesHome from "@/Components/PageComponents/Notes/NotesHome";
-import QuickDash from "@/Components/Home/QuickDash";
+import HomeContent from "@/Components/HomeAndAbout/homeContent";
 import "@/scss/Page/Home/Home.scss";
 
-const Home = () => {
+const QuickDash = lazy(() => import("@/Components/HomeAndAbout/QuickDash"));
+
+export default function Home() {
   return (
     <>
       <Header />
-      <div className="siteInfo">
-        <NotesHome />
-        <QuickDash />
-      </div>
+      <main className="homePage">
+        <div className="siteInfo">
+          <HomeContent />
+          <Suspense fallback={null}>
+            <QuickDash />
+          </Suspense>
+        </div>
+      </main>
     </>
   );
-};
-
-export default Home;
+}
