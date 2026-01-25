@@ -19,13 +19,20 @@ $link-hover: #cfe3ff;
   a {
     color: $link;
     text-decoration: none;
+
     &:hover { color: $link-hover; text-decoration: underline; }
+
     &:focus-visible {
       outline: 2px solid rgba(0, 209, 255, .7);
       outline-offset: 2px;
       border-radius: 6px;
       text-decoration: none;
     }
+  }
+
+  /* Reserve the wrapped footer height on small phones */
+  @include maxw($cellphone-portrait) {
+    min-height: 110px; // adjust 96–120px based on one Lighthouse run
   }
 }
 
@@ -38,6 +45,13 @@ $link-hover: #cfe3ff;
   /* Tighter vertical rhythm, slightly more padding for click area */
   padding: 1rem 1rem;
   gap: .75rem; /* was 1rem */
+
+  @include maxw($cellphone-portrait) {
+    grid-template-columns: 1fr;
+    row-gap: .6rem;
+    .footerLinks { justify-content: center; gap: .8rem; }
+    .socialLinks { justify-content: center; }
+  }
 
   .footerLinks {
     list-style: none; margin: 0; padding: 0;
@@ -64,41 +78,29 @@ $link-hover: #cfe3ff;
         text-decoration: none;
       }
 
-      svg { width: 1rem; height: 1rem; } /* icon scale to match smaller button */
+      svg { width: 1rem; height: 1rem; }
     }
   }
 }
 
 /* -------- divider + bottom row -------- */
-
-/* OPTION A (keep visible divider — current behavior) */
 .footerMeta {
   border-top: 1px solid $footer-top-border;
-}
 
-.footerMeta .metaInner {
-  /* Larger & tighter so it doesn’t look tiny */
-  font-size: 1.02rem;            /* was .95rem */
-  opacity: .95;                  /* was .9 */
-  padding: .7rem 1rem;
-  display: flex; align-items: center;
-  gap: .4rem;                    /* was .5rem */
-}
-.footerMeta .dot { opacity: .6; }
+  .metaInner {
+    font-size: 1.02rem;
+    opacity: .95;
+    padding: .7rem 1rem;
+    display: flex; align-items: center;
+    gap: .4rem;
 
-/* -------- responsive -------- */
-@include maxw($cellphone-portrait) {
-  .footerInner {
-    grid-template-columns: 1fr;
-    row-gap: .6rem;
-    .footerLinks { justify-content: center; gap: .8rem; }
-    .socialLinks { justify-content: center; }
+    @include maxw($cellphone-portrait) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .3rem;
+      font-size: 1rem;
+    }
   }
 
-  .footerMeta .metaInner {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: .3rem;
-    font-size: 1rem;      /* prevent over-shrinking on tiny phones */
-  }
+  .dot { opacity: .6; }
 }

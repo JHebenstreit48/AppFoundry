@@ -1,5 +1,4 @@
 import { pascalize } from './naming';
-
 /**
  * Matches a subtree AFTER the topic level.
  *
