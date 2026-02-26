@@ -14,6 +14,10 @@ export default defineConfig({
     }),
   ],
 
+  define: {
+    __BUILD_TIME_ISO__: JSON.stringify(new Date().toISOString()),
+  },
+
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -21,10 +25,10 @@ export default defineConfig({
       '@components': resolve(__dirname, 'src/Components'),
       '@routes': resolve(__dirname, 'src/routes'),
       '@scss': resolve(__dirname, 'src/scss'),
-      '@navFull': resolve(__dirname, 'src/Components/Navigation/Individual/FullTopics'),
-      '@navGranular': resolve(__dirname, 'src/Components/Navigation/Individual/Granularized'),
-      '@routeFull': resolve(__dirname, 'src/routes/IndividualRoutes/FullRoutes'),
-      '@routeGranular': resolve(__dirname, 'src/routes/IndividualRoutes/Granularized'),
+      '@navFull': resolve(__dirname, 'src/navigation/Individual/Topics'),
+      '@navGranular': resolve(__dirname, 'src/navigation/Individual/Granularized'),
+      '@routeFull': resolve(__dirname, 'src/routes/Individual/FullRoutes'),
+      '@routeGranular': resolve(__dirname, 'src/routes/Individual/Granularized'),
     },
   },
 

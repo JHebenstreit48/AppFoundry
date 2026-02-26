@@ -7,9 +7,6 @@
 $gradient-middle: #7a1f2a;   // crimson/rose
 $gradient-end:    #0c0607;   // obsidian
 
-$text-color: #ffffff;
-$text-glow:  #ffd166;
-
 $font-size-lg: 60px;
 $font-size-sm: 3rem;
 
@@ -66,7 +63,6 @@ html, body {
   margin: 0;
   padding: 0;
   background-color: #0d0d0d;
-  overflow-x: hidden;
 }
 
 /* ==============================

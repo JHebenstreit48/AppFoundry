@@ -10,10 +10,10 @@ export const topicButtons: Array<{ key: TopicKey; name: string }> = [
 ];
 
 const topicImporters: Record<TopicKey, () => Promise<{ default: Subpage }>> = {
-  languages: () => import("@/Navigation/Combined/Topics/languages"),
-  frameworks: () => import("@/Navigation/Combined/Topics/frameworks"),
-  tools: () => import("@/Navigation/Combined/Topics/tools"),
-  resources: () => import("@/Navigation/Combined/Topics/resources"),
+  languages: () => import("@/Navigation/Individual/Combined/Topics/languages"),
+  frameworks: () => import("@/Navigation/Individual/Combined/Topics/frameworks"),
+  tools: () => import("@/Navigation/Individual/Combined/Topics/tools"),
+  resources: () => import("@/Navigation/Individual/Combined/Topics/resources"),
 };
 
 export async function loadTopic(key: TopicKey): Promise<Subpage> {

@@ -17,7 +17,7 @@ export default function HomeContent() {
 
       <hr />
 
-      <div className="relatedProjects">
+      {/* <div className="relatedProjects">
         <h2 className="relatedProjectsHeader">Similar Projects</h2>
         <hr />
         <ul className="projectLinks">
@@ -40,7 +40,7 @@ export default function HomeContent() {
             – Non-mobile game development
           </li>
         </ul>
-      </div>
+      </div> */}
     </>
   );
 }
