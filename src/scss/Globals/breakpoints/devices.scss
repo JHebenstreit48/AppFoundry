@@ -1,29 +1,31 @@
 /* ===== Phones ===== */
-$cellphone-portrait-max: 480px;       /* phone portrait max-width */
-$phone-landscape-wide-max: 900px;     /* optional: landscape max-width */
-$phone-landscape-short-h-max: 480px;  /* optional: landscape max-height (short viewports) */
+$cellphone-portrait: 480px;           /* phone portrait max-width — unchanged */
+$phone-landscape-wide: 900px;         /* optional: landscape max-width — unchanged */
+$phone-landscape-short-h: 480px;      /* optional: landscape max-height (short viewports) — unchanged */
 
 /* ===== Tablets ===== */
-$tablet-portrait-min: 481px;          /* start after small phones */
+$tablet-portrait: 768px;              /* existing — unchanged (often used as max-width) */
+$tablet-landscape: 1024px;            /* existing — unchanged (often used as max-width) */
+
+/* New: explicit min/max for better control without renaming anything */
+$tablet-portrait-min: 481px;          /* after small phones */
 $tablet-portrait-max: 767px;          /* typical portrait tablets / large phones */
 
 $tablet-landscape-min: 768px;         /* start of tablet landscape */
-$tablet-landscape-max: 1199px;        /* covers modern iPad Air/Pro landscape (~1180–1210px), Surface scaled, etc. */
+$tablet-landscape-max: 1199px;        /* covers modern iPad Air/Pro/Surface landscape (~1180–1210px) */
 
 /* ===== Laptops ===== */
-$small-laptop-min: 1200px;            /* after tablet-landscape; covers high-end tablets + small laptops */
+$small-laptop-min: 1024px;            /* unchanged — still starts right after your existing $tablet-landscape */
 $small-laptop-max: 1366px;
-
 $medium-laptop-min: 1367px;
 $medium-laptop-max: 1536px;
-
 $large-laptop-min: 1537px;
 $large-laptop-max: 1919px;
 
 /* ===== Desktops / Monitors ===== */
-$desktop-1080p-min: 1920px;           /* 24" Full HD and up */
-$desktop-1440p-min: 2560px;           /* 27" QHD */
-$desktop-4k-min: 3840px;
+$desktop-1080p: 1920px;               /* 24" — unchanged */
+$desktop-1440p: 2560px;               /* 27" — unchanged */
+$desktop-4k: 3840px;
 
 /* ===== Optional container caps ===== */
 $container-xl: 1280px;
