@@ -20,7 +20,10 @@ export const config = {
   topicFsPrefixMap: {} as Record<string, string[]>,
 
   // Optional: normalize group folder names (crumbs after topic)
-  groupFolderNameMap: {} as Record<string, string>,
+  groupFolderNameMap: {
+    'Jetpack Compose': 'JetpackCompose',
+    'React Native': 'ReactNative',
+  } as Record<string, string>,
 
   genericLeafNames: new Set([
     'Introduction',

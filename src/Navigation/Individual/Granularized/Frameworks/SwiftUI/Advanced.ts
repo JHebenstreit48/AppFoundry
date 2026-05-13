@@ -1,4 +1,4 @@
-import { Subpage } from "@/Navigation/Combined/Core/NavigationTypes";
+import { Subpage } from "@/types/navigation";
 
 const Advanced: Subpage = {
   name: "Advanced",
