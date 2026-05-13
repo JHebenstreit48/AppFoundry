@@ -4,7 +4,7 @@ import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
 const State = () => {
-  const markdownFilePath = 'Frameworks/ReactNative/Basics/CoreConcepts/PropsState/State';
+  const markdownFilePath = 'Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Fundamentals/State';
 
   return (
     <>
