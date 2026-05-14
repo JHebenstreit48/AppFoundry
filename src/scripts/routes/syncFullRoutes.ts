@@ -5,7 +5,6 @@ import { ensureDir, writeIfChanged, exists } from '@/scripts/shared/utils/fs';
 import { buildRouteModel } from '@/scripts/shared/model/buildRouteModel';
 import { pascalize, topicFolderName } from '@/scripts/shared/utils/naming';
 
-
 function topicFileBase(topicFolder: string): string {
   // CSS/HTML -> css/html, NextJS -> nextJS
   if (/^[A-Z0-9]+$/.test(topicFolder)) return topicFolder.toLowerCase();
