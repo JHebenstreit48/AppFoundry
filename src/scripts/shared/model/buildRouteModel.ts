@@ -41,13 +41,13 @@ export type BucketModel = {
 };
 
 export type TopicModel = {
-  sectionCrumb: string;         // "Front End"
-  topicCrumb: string;           // "Angular"
-  sectionFolder: string;        // "FrontEnd"
-  topicFolder: string;          // "Angular"
+  sectionCrumb: string;
+  topicCrumb: string;
+  sectionFolder: string;
+  topicFolder: string;
   bucketsInOrder: BucketModel[];
-  leafGroups: LeafGroup[];          // leaf-group route files (your existing generator creates these)
-  aggregators: GroupAggregator[];   // aggregator route files like CoreConcepts.tsx
+  leafGroups: LeafGroup[];
+  aggregators: GroupAggregator[]; 
 };
 
 export type SectionModel = {
