@@ -10,8 +10,8 @@ const Tools: Subpage = {
           name: 'CLI',
           subpages: [
             {
-              name: 'Overview',
-              path: '/react-native/tools/expo/cli/overview'
+              name: 'Introduction',
+              path: '/react-native/tools/expo/cli/introduction'
             },
             {
               name: 'Workflow',

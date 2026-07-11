@@ -3,18 +3,18 @@ import Header from '@/Components/Shared/Header/Header';
 import PageTitle from '@/Components/PageComponents/PageTitle';
 import Notes from '@/Components/PageComponents/Notes/Notes';
 
-const Overview = () => {
-const markdownFilePath = 'Frameworks/ReactNative/Tools/Expo/CLI/Overview';
+const Introduction = () => {
+const markdownFilePath = 'Frameworks/ReactNative/Tools/Expo/CLI/Introduction';
 
 return (
     <>
       <PageLayout>
         <Header />
-        <PageTitle title="Expo CLI - Overview" />
+        <PageTitle title="Expo CLI - Introduction" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
   );
 };
 
-export default Overview;
+export default Introduction;
