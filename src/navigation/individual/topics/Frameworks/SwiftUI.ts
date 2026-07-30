@@ -1,7 +1,7 @@
 import type { Subpage } from '@/types/navigation';
 
-import Basics from '@/Navigation/Individual/Granularized/Frameworks/SwiftUI/Basics';
-import Advanced from '@/Navigation/Individual/Granularized/Frameworks/SwiftUI/Advanced';
+import Basics from '@/navigation/individual/modularized/Frameworks/SwiftUI/Basics';
+import Advanced from '@/navigation/individual/modularized/Frameworks/SwiftUI/Advanced';
 const SwiftUI: Subpage = {
   name: 'SwiftUI',
   subpages: [

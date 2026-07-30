@@ -1,7 +1,7 @@
 import type { Subpage } from '@/types/navigation';
 
-import Basics from '@/Navigation/Individual/Granularized/Tools/AndroidStudio/Basics';
-import Advanced from '@/Navigation/Individual/Granularized/Tools/AndroidStudio/Advanced';
+import Basics from '@/navigation/individual/modularized/Tools/AndroidStudio/Basics';
+import Advanced from '@/navigation/individual/modularized/Tools/AndroidStudio/Advanced';
 
 const AndroidStudio: Subpage = {
   name: 'Android Studio',

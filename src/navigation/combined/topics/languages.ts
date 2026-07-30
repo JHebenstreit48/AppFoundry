@@ -1,9 +1,9 @@
 import type { Subpage } from '@/types/navigation';
 
-import Kotlin from '@/Navigation/Individual/Topics/Languages/Kotlin';
-import Dart from '@/Navigation/Individual/Topics/Languages/Dart';
-import Java from '@/Navigation/Individual/Topics/Languages/Java';
-import TypeScript from '@/Navigation/Individual/Topics/Languages/TypeScript';
+import Kotlin from '@/navigation/individual/topics/Languages/Kotlin';
+import Dart from '@/navigation/individual/topics/Languages/Dart';
+import Java from '@/navigation/individual/topics/Languages/Java';
+import TypeScript from '@/navigation/individual/topics/Languages/TypeScript';
 
 const languages: Subpage = {
   name: 'Languages',

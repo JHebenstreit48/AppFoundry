@@ -1,7 +1,7 @@
 import type { Subpage } from '@/types/navigation';
 
-import AndroidStudio from '@/Navigation/Individual/Topics/Tools/AndroidStudio';
-import Xcode from '@/Navigation/Individual/Topics/Tools/Xcode';
+import AndroidStudio from '@/navigation/individual/topics/Tools/AndroidStudio';
+import Xcode from '@/navigation/individual/topics/Tools/Xcode';
 
 const tools: Subpage = {
   name: 'Tools',

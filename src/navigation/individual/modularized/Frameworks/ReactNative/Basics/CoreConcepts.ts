@@ -1,9 +1,9 @@
 import type { Subpage } from '@/types/navigation';
 
-import Components from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Basics/CoreConcepts/Components';
-import JSXTSXEvent from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent';
-import PropsState from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Basics/CoreConcepts/PropsState';
-import Styling from '@/Navigation/Individual/Granularized/Frameworks/ReactNative/Basics/CoreConcepts/Styling';
+import Components from '@/navigation/individual/modularized/Frameworks/ReactNative/Basics/CoreConcepts/Components';
+import JSXTSXEvent from '@/navigation/individual/modularized/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent';
+import PropsState from '@/navigation/individual/modularized/Frameworks/ReactNative/Basics/CoreConcepts/PropsState';
+import Styling from '@/navigation/individual/modularized/Frameworks/ReactNative/Basics/CoreConcepts/Styling';
 
 const CoreConcepts: Subpage = {
   name: 'Core Concepts',

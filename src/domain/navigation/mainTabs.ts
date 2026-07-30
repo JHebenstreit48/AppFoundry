@@ -1,10 +1,10 @@
 import type { Subpage } from '@/types/navigation';
 
-import languages from '@/Navigation/Combined/Topics/languages';
-import frameworks from '@/Navigation/Combined/Topics/frameworks';
-import tools from '@/Navigation/Combined/Topics/tools';
-import resources from '@/Navigation/Combined/Topics/resources';
-import glossary from '@/Navigation/Combined/Topics/glossary';
+import languages from '@/navigation/combined/topics/languages';
+import frameworks from '@/navigation/combined/topics/frameworks';
+import tools from '@/navigation/combined/topics/tools';
+import resources from '@/navigation/combined/topics/resources';
+import glossary from '@/navigation/combined/topics/glossary';
 
 const pages: Subpage[] = [
   languages,

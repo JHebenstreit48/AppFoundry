@@ -1,7 +1,7 @@
 import type { Subpage } from '@/types/navigation';
 
-import Basics from '@/Navigation/Individual/Granularized/Frameworks/JetpackCompose/Basics';
-import Advanced from '@/Navigation/Individual/Granularized/Frameworks/JetpackCompose/Advanced';
+import Basics from '@/navigation/individual/modularized/Frameworks/JetpackCompose/Basics';
+import Advanced from '@/navigation/individual/modularized/Frameworks/JetpackCompose/Advanced';
 
 const JetpackCompose: Subpage = {
   name: 'Jetpack Compose',

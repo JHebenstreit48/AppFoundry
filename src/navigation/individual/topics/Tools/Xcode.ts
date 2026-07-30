@@ -1,7 +1,7 @@
 import type { Subpage } from '@/types/navigation';
 
-import Basics from '@/Navigation/Individual/Granularized/Tools/Xcode/Basics';
-import Advanced from '@/Navigation/Individual/Granularized/Tools/Xcode/Advanced';
+import Basics from '@/navigation/individual/modularized/Tools/Xcode/Basics';
+import Advanced from '@/navigation/individual/modularized/Tools/Xcode/Advanced';
 
 const Xcode: Subpage = {
   name: 'Xcode',

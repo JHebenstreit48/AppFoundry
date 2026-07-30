@@ -1,7 +1,7 @@
 import type { Subpage } from '@/types/navigation';
 
-import Basics from '@/Navigation/Individual/Granularized/Frameworks/Xamarin/Basics';
-import Advanced from '@/Navigation/Individual/Granularized/Frameworks/Xamarin/Advanced';
+import Basics from '@/navigation/individual/modularized/Frameworks/Xamarin/Basics';
+import Advanced from '@/navigation/individual/modularized/Frameworks/Xamarin/Advanced';
 const Xamarin: Subpage = {
   name: 'Xamarin',
   subpages: [

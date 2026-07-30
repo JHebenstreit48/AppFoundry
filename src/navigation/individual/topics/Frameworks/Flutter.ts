@@ -1,7 +1,7 @@
 import type { Subpage } from '@/types/navigation';
 
-import Basics from '@/Navigation/Individual/Granularized/Frameworks/Flutter/Basics';
-import Advanced from '@/Navigation/Individual/Granularized/Frameworks/Flutter/Advanced';
+import Basics from '@/navigation/individual/modularized/Frameworks/Flutter/Basics';
+import Advanced from '@/navigation/individual/modularized/Frameworks/Flutter/Advanced';
 
 const Flutter: Subpage = {
   name: 'Flutter',
