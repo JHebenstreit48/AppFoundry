@@ -11,8 +11,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@scripts/*": ["./scripts/*"],
-      "@pages/*": ["./src/Pages/*"],
-      "@components/*": ["./src/Components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"],
       "@routes/*": ["./src/routes/*"],
       "@scss/*": ["./src/scss/*"]
     },

@@ -1,14 +1,16 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import Footer from '@/Components/Shared/Footer';
-import RouteTracker from '@/Components/Shared/analytics/RouteTracker';
-import BackToTopGate from '@/Components/Shared/BackToTop/Gate';
 
-import '@/scss/Page/Page.scss';
-import '@/scss/Shared/Header/index.scss';
-import '@/scss/Shared/Footer.scss';
-import '@/scss/Navigation/index.scss';
-import '@/scss/Shared/Error.scss';
+import Header from '@/components/shared/header/header';
+import Footer from '@/components/shared/footer';
+import RouteTracker from '@/components/shared/analytics/routeTracker';
+import BackToTopGate from '@/components/shared/backToTop/gate';
+
+import '@/scss/shared/page/page.scss';
+import '@/scss/shared/header/index.scss';
+import '@/scss/shared/footer.scss';
+import '@/scss/navigation/index.scss';
+import '@/scss/shared/error.scss';
 
 function RouteFallback() {
   return <div className="routeFallback">Loading…</div>;
@@ -19,6 +21,7 @@ export default function App() {
     <div className="appContainer">
       <RouteTracker />
       <BackToTopGate />
+      <Header />
 
       <div className="contentWrapper">
         <Suspense fallback={<RouteFallback />}>
