@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import "@/scss/Page/PageTitle.scss";
 
 const normalizePath = (p: string) => {

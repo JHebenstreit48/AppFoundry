@@ -6,9 +6,9 @@ import type { SearchMatch } from '@/components/navigationUI/search/utils/types';
 
 import { getSearchIndex } from '@/components/navigationUI/search/utils/searchIndex';
 
-import SearchIcon from '@/components/navigationUI/search/SearchIcon';
-import SearchModal from '@/components/navigationUI/search/Modal';
-import NavSubpages from '@/components/navigationUI/dropdown/NavSubpages';
+import SearchIcon from '@/components/navigationUI/search/searchIcon';
+import SearchModal from '@/components/navigationUI/search/modal';
+import NavSubpages from '@/components/navigationUI/dropdown/navSubpages';
 
 import { useNavDropdown } from '@/hooks/navigation/useNavDropdown';
 import { useClickOutside } from '@/hooks/ui/useClickOutside';

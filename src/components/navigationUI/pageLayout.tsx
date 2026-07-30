@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
+
 import { useBreadcrumbTrail } from '@/hooks/navigation/useBreadcrumbTrail';
+
 import '@/scss/Navigation/index.scss';
 
 type PageLayoutProps = {
@@ -13,7 +15,6 @@ const PageLayout = ({ children, shortTitle }: PageLayoutProps) => {
   const title =
     shortTitle || (breadcrumb.length > 0 ? breadcrumb.join(' > ') : 'Untitled Page');
 
-  // ✅ Keep this — it sets the browser tab title
   document.title = title;
 
   return (
