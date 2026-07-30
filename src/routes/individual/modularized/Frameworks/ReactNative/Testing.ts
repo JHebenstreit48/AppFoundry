@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router-dom";
 
-import Basics from "@/routes/Individual/Granularized/Frameworks/ReactNative/Testing/Basics";
-import E2E from "@/routes/Individual/Granularized/Frameworks/ReactNative/Testing/E2E";
+import Basics from "@/routes/individual/modularized/Frameworks/ReactNative/Testing/Basics";
+import E2E from "@/routes/individual/modularized/Frameworks/ReactNative/Testing/E2E";
 
 const Testing: RouteObject[] = [
   ...Basics,

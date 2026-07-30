@@ -21,15 +21,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
-      '@scripts': resolve(__dirname, 'scripts'), // added — was in tsconfig but missing here
+      '@scripts': resolve(__dirname, 'scripts'),
       '@pages': resolve(__dirname, 'src/Pages'),
       '@components': resolve(__dirname, 'src/components'),
       '@routes': resolve(__dirname, 'src/routes'),
       '@scss': resolve(__dirname, 'src/scss'),
-      '@navFull': resolve(__dirname, 'src/navigation/individual/Topics'),
-      '@navGranular': resolve(__dirname, 'src/navigation/individual/Granularized'),
-      '@routeFull': resolve(__dirname, 'src/routes/Individual/FullRoutes'),
-      '@routeGranular': resolve(__dirname, 'src/routes/Individual/Granularized'),
+      '@navFull': resolve(__dirname, 'src/navigation/individual/topics'),
+      '@navGranular': resolve(__dirname, 'src/navigation/individual/modularized'),
+      '@routeFull': resolve(__dirname, 'src/routes/individual/topics'),
+      '@routeGranular': resolve(__dirname, 'src/routes/individual/modularized'),
     },
   },
 

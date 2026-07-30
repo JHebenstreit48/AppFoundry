@@ -1,8 +1,8 @@
 import { RouteObject } from "react-router-dom";
 
-import Fundamentals from "@/routes/Individual/Granularized/Frameworks/ReactNative/Basics/Fundamentals";
-import CoreConcepts from "@/routes/Individual/Granularized/Frameworks/ReactNative/Basics/CoreConcepts";
-import Navigation from "@/routes/Individual/Granularized/Frameworks/ReactNative/Basics/Navigation";
+import Fundamentals from "@/routes/individual/modularized/Frameworks/ReactNative/Basics/Fundamentals";
+import CoreConcepts from "@/routes/individual/modularized/Frameworks/ReactNative/Basics/CoreConcepts";
+import Navigation from "@/routes/individual/modularized/Frameworks/ReactNative/Basics/Navigation";
 
 const Basics: RouteObject[] = [
   ...Fundamentals,

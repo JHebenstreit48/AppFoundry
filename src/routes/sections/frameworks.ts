@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router-dom";
 
-import JetpackCompose from "@/routes/Individual/Full/Frameworks/jetpackCompose";
-import ReactNative from "@/routes/Individual/Full/Frameworks/reactNative";
+import JetpackCompose from "@/routes/individual/topics/Frameworks/jetpackCompose";
+import ReactNative from "@/routes/individual/topics/Frameworks/reactNative";
 
 const frameworks: RouteObject[] = [
   ...JetpackCompose,

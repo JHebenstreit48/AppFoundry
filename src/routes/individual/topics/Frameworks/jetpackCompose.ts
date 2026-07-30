@@ -1,7 +1,7 @@
 import { RouteObject } from "react-router-dom";
 
-import Basics from "@/routes/Individual/Granularized/Frameworks/JetpackCompose/Basics";
-import Advanced from "@/routes/Individual/Granularized/Frameworks/JetpackCompose/Advanced";
+import Basics from "@/routes/individual/modularized/Frameworks/JetpackCompose/Basics";
+import Advanced from "@/routes/individual/modularized/Frameworks/JetpackCompose/Advanced";
 
 const JetpackCompose: RouteObject[] = [
   ...Basics,

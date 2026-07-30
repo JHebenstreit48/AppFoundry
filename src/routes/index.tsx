@@ -6,10 +6,10 @@ import Home from '@/Pages/Special/Home';
 import About from '@/Pages/Special/About';
 import QRCodePage from '@/Pages/Special/qrCode';
 
-import frameworks from '@/routes/Sections/frameworks';
-import engines from '@/routes/Sections/engines';
-import languages from '@/routes/Sections/languages';
-import resources from '@/routes/Sections/resources';
+import frameworks from '@/routes/sections/frameworks';
+import engines from '@/routes/sections/engines';
+import languages from '@/routes/sections/languages';
+import resources from '@/routes/sections/resources';
 
 export const router = createBrowserRouter([
   {

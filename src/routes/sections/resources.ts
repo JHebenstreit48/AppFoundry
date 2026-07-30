@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router-dom';
 
-import reactNative from '@/routes/Individual/Granularized/Resources/Frameworks/reactNative';
+import reactNative from '@/routes/individual/modularized/Resources/Frameworks/reactNative';
 
 const resources: RouteObject[] = [
     ...reactNative,
