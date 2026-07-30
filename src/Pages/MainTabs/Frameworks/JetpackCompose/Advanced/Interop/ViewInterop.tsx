@@ -1,16 +1,13 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle';
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle';
+import Notes from '@/components/pageComponents/notes/notes';
 
 const ViewInterop = () => {
   const markdownFilePath = 'Frameworks/JetpackCompose/Advanced/Interop/ViewInterop';
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="View Interop" />
+      <PageLayout>        <PageTitle title="View Interop" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>

@@ -1,16 +1,13 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle';
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle';
+import Notes from '@/components/pageComponents/notes/notes';
 
 const DebuggingAndTesting = () => {
   const markdownFilePath = 'Frameworks/ReactNative/Advanced/CICD/DebuggingAndTesting';
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="Debugging & Testing" />
+      <PageLayout>        <PageTitle title="Debugging & Testing" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>

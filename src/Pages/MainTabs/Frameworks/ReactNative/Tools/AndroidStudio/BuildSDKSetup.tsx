@@ -1,16 +1,13 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle';
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle';
+import Notes from '@/components/pageComponents/notes/notes';
 
 const BuildSDKSetup = () => {
   const markdownFilePath = 'Frameworks/ReactNative/Tools/AndroidStudio/BuildSDKSetup';
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="Build/SDK Setup (RN)" />
+      <PageLayout>        <PageTitle title="Build/SDK Setup (RN)" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>

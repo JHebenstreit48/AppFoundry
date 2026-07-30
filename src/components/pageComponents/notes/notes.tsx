@@ -1,7 +1,10 @@
 import { useEffect, useState, lazy, Suspense, useCallback } from 'react';
+
 import { fetchMarkdown } from '@/utils/notes/fetchMarkdown';
 import { fetchNoteMeta } from '@/utils/notes/fetchNoteMeta';
+
 import NoteMetaLine from '@/components/pageComponents/notes/notesRendering/customComponents/noteMetaLine';
+
 import '@/scss/Shared/Notes/index.scss';
 
 const MarkdownRenderer = lazy(

@@ -1,4 +1,4 @@
-import { getResponsiveHeaderSize } from "@/Components/Shared/Header/ResponsiveHeaderLogic";
+import { getResponsiveHeaderSize } from "@/components/shared/header/ResponsiveHeaderLogic";
 import { Link } from "react-router-dom";
 
 interface HeaderTitleProps {

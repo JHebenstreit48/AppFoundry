@@ -1,16 +1,13 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle';
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle';
+import Notes from '@/components/pageComponents/notes/notes';
 
 const StateAndEvents = () => {
   const markdownFilePath = 'Frameworks/JetpackCompose/Basics/Core/StateAndEvents';
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="State & Events" />
+      <PageLayout>        <PageTitle title="State & Events" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>

@@ -1,7 +1,6 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle'
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle'
+import Notes from '@/components/pageComponents/notes/notes';
 
 const Setup = () => {
   const markdownFilePath =
@@ -9,9 +8,7 @@ const Setup = () => {
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="React Native - Project Setup" /> 
+      <PageLayout>        <PageTitle title="React Native - Project Setup" /> 
         <Notes
         filePath={markdownFilePath}
          />

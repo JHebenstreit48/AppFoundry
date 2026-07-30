@@ -1,16 +1,13 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle';
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle';
+import Notes from '@/components/pageComponents/notes/notes';
 
 const TestingComponents = () => {
   const markdownFilePath = 'Frameworks/ReactNative/Testing/Basics/TestingComponents';
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="Testing Components" />
+      <PageLayout>        <PageTitle title="Testing Components" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>

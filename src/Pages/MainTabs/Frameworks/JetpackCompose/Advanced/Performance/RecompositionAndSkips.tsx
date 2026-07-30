@@ -1,16 +1,13 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle';
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle';
+import Notes from '@/components/pageComponents/notes/notes';
 
 const RecompositionAndSkips = () => {
   const markdownFilePath = 'Frameworks/JetpackCompose/Advanced/Performance/RecompositionAndSkips';
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="Recomposition & Skips" />
+      <PageLayout>        <PageTitle title="Recomposition & Skips" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>

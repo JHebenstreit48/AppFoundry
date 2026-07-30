@@ -1,11 +1,10 @@
-import Header from "@/Components/Shared/Header/Header";
-import AboutContent from "@/Components/HomeAndAbout/aboutContent";
-import "@/scss/Shared/HomeAndAbout/index.scss";
+import AboutContent from "@/components/homeAndAbout/aboutContent";
+
+import "@/scss/shared/homeAndAbout/index.scss";
 
 export default function About() {
   return (
     <>
-      <Header />
       <main className="homePage">
         <div className="siteInfo">
           <AboutContent />

@@ -1,16 +1,13 @@
-import PageLayout from '@/Components/NavigationUI/PageLayout';
-import Header from '@/Components/Shared/Header/Header';
-import PageTitle from '@/Components/PageComponents/PageTitle';
-import Notes from '@/Components/PageComponents/Notes/Notes';
+import PageLayout from '@/components/navigationUI/pageLayout';
+import PageTitle from '@/components/pageComponents/pageTitle';
+import Notes from '@/components/pageComponents/notes/notes';
 
 const DeepLinking = () => {
   const markdownFilePath = 'Frameworks/ReactNative/Intermediate/Navigation/DeepLinking';
 
   return (
     <>
-      <PageLayout>
-        <Header />
-        <PageTitle title="React Native Intermediate - Deep Linking" />
+      <PageLayout>        <PageTitle title="React Native Intermediate - Deep Linking" />
         <Notes filePath={markdownFilePath} />
       </PageLayout>
     </>
