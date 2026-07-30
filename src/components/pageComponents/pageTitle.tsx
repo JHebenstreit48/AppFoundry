@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import "@/scss/Page/PageTitle.scss";
+import "@/scss/shared/page/pageTitle.scss";
 
 const normalizePath = (p: string) => {
   if (!p) return "/";
