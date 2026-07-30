@@ -1,6 +1,6 @@
 export type NoteMeta = {
     siteId: string;
-    fullPath: string;   // "FrontEnd/Angular/Basics/Fundamentals/Introduction"
+    fullPath: string;
     title: string;
     tags: string[];
   };
