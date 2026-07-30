@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const InstallingRunning = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/Expo/ExpoGo/InstallingRunning'));
-const Previewing = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/Expo/ExpoGo/Previewing'));
-const QRCodesTesting = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/Expo/ExpoGo/QRCodesTesting'));
+const InstallingRunning = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/Expo/ExpoGo/InstallingRunning'));
+const Previewing = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/Expo/ExpoGo/Previewing'));
+const QRCodesTesting = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/Expo/ExpoGo/QRCodesTesting'));
 
 const ExpoGo: RouteObject[] = [
   {

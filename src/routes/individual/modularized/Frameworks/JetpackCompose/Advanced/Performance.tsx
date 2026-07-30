@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const RecompositionAndSkips = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Advanced/Performance/RecompositionAndSkips'));
-const ToolingAndProfilers = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Advanced/Performance/ToolingAndProfilers'));
+const RecompositionAndSkips = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Advanced/Performance/RecompositionAndSkips'));
+const ToolingAndProfilers = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Advanced/Performance/ToolingAndProfilers'));
 
 const Performance: RouteObject[] = [
   {

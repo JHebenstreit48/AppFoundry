@@ -5,21 +5,21 @@ import { RouteObject } from 'react-router-dom';
 const ConditionalRoutes = lazy(
   () =>
     import(
-      '@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Navigation/ConditionalRoutes'
+      '@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Navigation/ConditionalRoutes'
     )
 );
 
 const DeepLinking = lazy(
   () =>
     import(
-      '@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Navigation/DeepLinking'
+      '@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Navigation/DeepLinking'
     )
 );
 
 const Performance = lazy(
   () =>
     import(
-      '@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Navigation/Performance'
+      '@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Navigation/Performance'
     )
 );
 // --------------- Navigation > Intermediate > End -----------------

@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const HandlingLargeLists = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Advanced/Performance/HandlingLargeLists'));
-const AnimationsAndGestures = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Advanced/Performance/AnimationsAndGestures'));
-const MemoryOptimization = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Advanced/Performance/MemoryOptimization'));
+const HandlingLargeLists = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Advanced/Performance/HandlingLargeLists'));
+const AnimationsAndGestures = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Advanced/Performance/AnimationsAndGestures'));
+const MemoryOptimization = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Advanced/Performance/MemoryOptimization'));
 
 const Performance: RouteObject[] = [
   {

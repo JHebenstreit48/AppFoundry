@@ -1,6 +1,6 @@
 import { RouteObject } from "react-router-dom";
 
-import BasicsResources from "@/Pages/MainTabs/Resources/Frameworks/ReactNative/Basics";
+import BasicsResources from "@/pages/mainTabs/Resources/Frameworks/ReactNative/Basics";
 
 const reactNativeResourcesRoutes: RouteObject[] = [
   // --------------- React Native > Resources > Basics Start ---------------

@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Introduction = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/Expo/CLI/Introduction'));
-const Workflow = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/Expo/CLI/Workflow'));
+const Introduction = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/Expo/CLI/Introduction'));
+const Workflow = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/Expo/CLI/Workflow'));
 
 const CLI: RouteObject[] = [
   {

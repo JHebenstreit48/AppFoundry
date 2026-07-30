@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const CustomCode = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Advanced/Native/CustomCode'));
-const Bridging = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Advanced/Native/Bridging'));
+const CustomCode = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Advanced/Native/CustomCode'));
+const Bridging = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Advanced/Native/Bridging'));
 
 const Native: RouteObject[] = [
   {

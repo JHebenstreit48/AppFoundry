@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const FetchAndAxios = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/AsyncAPI/FetchAndAxios'));
-const ManagingAPIState = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/AsyncAPI/ManagingApiState'));
+const FetchAndAxios = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/AsyncAPI/FetchAndAxios'));
+const ManagingAPIState = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/AsyncAPI/ManagingApiState'));
 
 const AsyncAPIState: RouteObject[] = [
   {

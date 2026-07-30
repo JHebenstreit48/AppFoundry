@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Composables = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Basics/Core/Composables'));
-const StateAndEvents = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Basics/Core/StateAndEvents'));
-const Lists = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Basics/Core/Lists'));
-const Gestures = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Basics/Core/Gestures'));
+const Composables = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Basics/Core/Composables'));
+const StateAndEvents = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Basics/Core/StateAndEvents'));
+const Lists = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Basics/Core/Lists'));
+const Gestures = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Basics/Core/Gestures'));
 
 const Core: RouteObject[] = [
   {

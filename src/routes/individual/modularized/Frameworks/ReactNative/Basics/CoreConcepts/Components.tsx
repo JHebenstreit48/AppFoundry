@@ -1,13 +1,13 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Basics = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Basics'));
+const Basics = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Basics'));
 
-const Core = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Core'));
+const Core = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Core'));
 
-const BuiltIn = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/BuiltIn'));
+const BuiltIn = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/BuiltIn'));
 
-const Patterns = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Patterns'));
+const Patterns = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Components/Patterns'));
 
 const Components: RouteObject[] = [
   {

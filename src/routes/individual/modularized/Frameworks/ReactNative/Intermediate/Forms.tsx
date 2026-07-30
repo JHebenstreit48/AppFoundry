@@ -2,15 +2,15 @@ import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
 // --------------- Forms > Intermediate > Start ---------------
-const Formik = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Forms/Formik'));
+const Formik = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Forms/Formik'));
 
-const YupValidation = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Forms/YupValidation'));
+const YupValidation = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Forms/YupValidation'));
 
 const ErrorsAndFeedback = lazy(
-  () => import('@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Forms/ErrorsAndFeedback')
+  () => import('@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Forms/ErrorsAndFeedback')
 );
 
-const InputsAndFocus = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Forms/InputsAndFocus'));
+const InputsAndFocus = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Forms/InputsAndFocus'));
 // --------------- Forms > Intermediate > End -----------------
 
 const Forms: RouteObject[] = [

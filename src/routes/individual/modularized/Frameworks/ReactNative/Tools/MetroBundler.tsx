@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Overview = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/MetroBundler/Overview'));
-const ManualAccessCommands = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/MetroBundler/ManualAccessCommands'));
+const Overview = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/MetroBundler/Overview'));
+const ManualAccessCommands = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/MetroBundler/ManualAccessCommands'));
 
 const MetroBundler: RouteObject[] = [
   {

@@ -4,13 +4,13 @@ import { RouteObject } from 'react-router-dom';
 const JSXAndTSX = lazy(
   () =>
     import(
-      '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent/JSXAndTSX'
+      '@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent/JSXAndTSX'
     )
 );
 const EventHandle = lazy(
   () =>
     import(
-      '@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent/EventHandle'
+      '@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/JSXTSXEvent/EventHandle'
     )
 );
 

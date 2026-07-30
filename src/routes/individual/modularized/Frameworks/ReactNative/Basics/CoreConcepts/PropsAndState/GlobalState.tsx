@@ -1,10 +1,10 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const ContextAPI = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/ContextApi'));
-const ProvidersAndPerformance = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/ProvidersAndPerformance'));
-const RTKAndRTKQuery = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/RtkAndRtkQuery'));
-const PersistAndOffline = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/PersistAndOffline'));
+const ContextAPI = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/ContextApi'));
+const ProvidersAndPerformance = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/ProvidersAndPerformance'));
+const RTKAndRTKQuery = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/RtkAndRtkQuery'));
+const PersistAndOffline = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Global/PersistAndOffline'));
 
 const GlobalState: RouteObject[] = [
   {

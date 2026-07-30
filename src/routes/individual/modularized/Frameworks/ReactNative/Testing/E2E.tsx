@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const DetoxOverview = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Testing/E2E/DetoxOverview'));
-const SimulatorsAndRealDevices = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Testing/E2E/SimulatorsAndRealDevices'));
+const DetoxOverview = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Testing/E2E/DetoxOverview'));
+const SimulatorsAndRealDevices = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Testing/E2E/SimulatorsAndRealDevices'));
 
 const E2E: RouteObject[] = [
   {

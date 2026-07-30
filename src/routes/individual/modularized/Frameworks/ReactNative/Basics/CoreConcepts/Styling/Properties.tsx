@@ -1,13 +1,13 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Basics = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Basics'));
-const PositioningAndAlignment = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Positioning'));
-const Spacing = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Spacing'));
-const Typography = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Typography'));
-const BordersAndShadows = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/BordersAndShadows'));
-const SizeAndDimensions = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/SizeAndDimensions'));
-const Colors = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Colors'));
+const Basics = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Basics'));
+const PositioningAndAlignment = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Positioning'));
+const Spacing = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Spacing'));
+const Typography = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Typography'));
+const BordersAndShadows = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/BordersAndShadows'));
+const SizeAndDimensions = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/SizeAndDimensions'));
+const Colors = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/Styling/Properties/Colors'));
 
 const Properties: RouteObject[] = [
   {

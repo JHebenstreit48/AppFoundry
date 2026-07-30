@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Overview = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/ReactNativeCLI/Overview'));
-const Setup = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/ReactNativeCLI/Setup'));
-const RunningApps = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/ReactNativeCLI/RunningApps'));
+const Overview = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/ReactNativeCLI/Overview'));
+const Setup = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/ReactNativeCLI/Setup'));
+const RunningApps = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/ReactNativeCLI/RunningApps'));
 
 const ReactNativeCLI: RouteObject[] = [
   {

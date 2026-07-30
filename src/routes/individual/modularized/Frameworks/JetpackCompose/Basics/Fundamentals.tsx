@@ -1,9 +1,9 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Introduction = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Basics/Fundamentals/Introduction'));
-const Setup = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Basics/Fundamentals/Setup'));
-const Structure = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Basics/Fundamentals/Structure'));
+const Introduction = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Basics/Fundamentals/Introduction'));
+const Setup = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Basics/Fundamentals/Setup'));
+const Structure = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Basics/Fundamentals/Structure'));
 
 const Fundamentals: RouteObject[] = [
   {

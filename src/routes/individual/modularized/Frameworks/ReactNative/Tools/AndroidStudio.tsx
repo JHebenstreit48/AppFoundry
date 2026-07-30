@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const AVDsForRN = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/AndroidStudio/AVDsForRN'));
-const BuildSDKSetup = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/AndroidStudio/BuildSDKSetup'));
+const AVDsForRN = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/AndroidStudio/AVDsForRN'));
+const BuildSDKSetup = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/AndroidStudio/BuildSDKSetup'));
 
 const AndroidStudio: RouteObject[] = [
   {

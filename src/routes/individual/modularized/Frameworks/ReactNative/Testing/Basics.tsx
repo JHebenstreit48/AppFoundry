@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const UnitTestingWithJest = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Testing/Basics/UnitTestingWithJest'));
-const TestingComponents = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Testing/Basics/TestingComponents'));
+const UnitTestingWithJest = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Testing/Basics/UnitTestingWithJest'));
+const TestingComponents = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Testing/Basics/TestingComponents'));
 
 const Basics: RouteObject[] = [
   {

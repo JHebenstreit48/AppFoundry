@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const Props = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Fundamentals/Props'));
-const State = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Fundamentals/State'));
+const Props = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Fundamentals/Props'));
+const State = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Basics/CoreConcepts/PropsState/Fundamentals/State'));
 
 const Fundamentals: RouteObject[] = [
   {

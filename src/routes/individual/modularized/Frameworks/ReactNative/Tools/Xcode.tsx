@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const IOSSimulators = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/Xcode/IOSSimulators'));
-const SigningAndRun = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Tools/Xcode/SigningAndRun'));
+const IOSSimulators = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/Xcode/IOSSimulators'));
+const SigningAndRun = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Tools/Xcode/SigningAndRun'));
 
 const Xcode: RouteObject[] = [
   {

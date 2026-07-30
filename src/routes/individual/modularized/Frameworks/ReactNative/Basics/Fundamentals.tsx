@@ -4,17 +4,17 @@ import { RouteObject } from 'react-router-dom';
 const Introduction = lazy(
   () =>
     import(
-      '@/Pages/MainTabs/Frameworks/ReactNative/Basics/Fundamentals/Introduction'
+      '@/pages/mainTabs/Frameworks/ReactNative/Basics/Fundamentals/Introduction'
     )
 );
 const Setup = lazy(
   () =>
-    import('@/Pages/MainTabs/Frameworks/ReactNative/Basics/Fundamentals/Setup')
+    import('@/pages/mainTabs/Frameworks/ReactNative/Basics/Fundamentals/Setup')
 );
 const Structure = lazy(
   () =>
     import(
-      '@/Pages/MainTabs/Frameworks/ReactNative/Basics/Fundamentals/Structure'
+      '@/pages/mainTabs/Frameworks/ReactNative/Basics/Fundamentals/Structure'
     )
 );
 

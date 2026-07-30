@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const BuildVariantsAndFlavors = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Advanced/BuildAndConfig/BuildVariantsAndFlavors'));
-const PermissionsAndManifests = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Advanced/BuildAndConfig/PermissionsAndManifests'));
+const BuildVariantsAndFlavors = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Advanced/BuildAndConfig/BuildVariantsAndFlavors'));
+const PermissionsAndManifests = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Advanced/BuildAndConfig/PermissionsAndManifests'));
 
 const BuildAndConfig: RouteObject[] = [
   {

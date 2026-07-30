@@ -2,11 +2,11 @@ import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
 // --------------- Features > Intermediate > Start ---------------
-const DeviceAPIs = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Features/DeviceAPIs'));
+const DeviceAPIs = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Features/DeviceAPIs'));
 
-const Permissions = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Features/Permissions'));
+const Permissions = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Features/Permissions'));
 
-const NativeModules = lazy(() => import('@/Pages/MainTabs/Frameworks/ReactNative/Intermediate/Features/NativeModules'));
+const NativeModules = lazy(() => import('@/pages/mainTabs/Frameworks/ReactNative/Intermediate/Features/NativeModules'));
 // --------------- Features > Intermediate > End -----------------
 
 const Features: RouteObject[] = [

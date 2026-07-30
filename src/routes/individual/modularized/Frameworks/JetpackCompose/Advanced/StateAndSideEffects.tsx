@@ -1,8 +1,8 @@
 import { lazy } from 'react';
 import { RouteObject } from 'react-router-dom';
 
-const StateHoisting = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Advanced/StateAndSideEffects/StateHoisting'));
-const EffectsAndCoroutines = lazy(() => import('@/Pages/MainTabs/Frameworks/JetpackCompose/Advanced/StateAndSideEffects/EffectsAndCoroutines'));
+const StateHoisting = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Advanced/StateAndSideEffects/StateHoisting'));
+const EffectsAndCoroutines = lazy(() => import('@/pages/mainTabs/Frameworks/JetpackCompose/Advanced/StateAndSideEffects/EffectsAndCoroutines'));
 
 const StateAndSideEffects: RouteObject[] = [
   {
