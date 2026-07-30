@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 import Footer from '@/components/shared/Footer';
 import RouteTracker from '@/components/shared/analytics/RouteTracker';
-import BackToTopGate from '@/components/shared/BackToTop/Gate';
+import BackToTopGate from '@/components/shared/backToTop/Gate';
 
 import '@/scss/Page/Page.scss';
 import '@/scss/Shared/Header/index.scss';
