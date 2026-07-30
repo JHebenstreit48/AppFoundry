@@ -5,7 +5,7 @@ import { fetchNoteMeta } from '@/utils/notes/fetchNoteMeta';
 
 import NoteMetaLine from '@/components/pageComponents/notes/notesRendering/customComponents/noteMetaLine';
 
-import '@/scss/Shared/Notes/index.scss';
+import '@/scss/shared/notes/index.scss';
 
 const MarkdownRenderer = lazy(
   () => import('@/components/pageComponents/notes/notesRendering/customComponents/markdownRenderer')
